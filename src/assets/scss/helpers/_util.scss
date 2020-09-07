@@ -1,0 +1,78 @@
+// setting
+body {
+    font-family: "Kaushan Script", cursive;
+}
+.bg-img {
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.logo {
+    padding: 16px 32px;
+    font-family: "Oleo Script", cursive;
+    a {
+        font-size: 48px;
+        &:hover {
+            color: #cbac67;
+        }
+    }
+}
+.coverTitle {
+    font-family: "Kaushan Script", cursive;
+}
+.h2Title {
+    font-size: 48px;
+    margin-bottom: 64px;
+    display: inline-block;
+    line-height: 48px;
+    position: relative;
+    text-align: center;
+    color: #cbac67;
+    font-weight: bold;
+    &::before {
+        left: -70%;
+    }
+    &::after {
+        right: -70%;
+    }
+}
+.h2Title::before,
+.h2Title::after {
+    content: "";
+    height: 3px;
+    background: #cbac67;
+    top: 50%;
+    width: 55%;
+    position: absolute;
+}
+.topCover {
+    width: 100%;
+    font-size: 50px;
+    h3 {
+        padding: 108px 108px;
+        color: white;
+        font-size: 64px;
+    }
+}
+.breadcrumb {
+    background: none;
+    ul {
+        li {
+            font-size: 24px;
+        }
+    }
+    a:hover {
+        color: red;
+    }
+}
+
+// font
+.fz-20 {
+    font-size: 20px;
+}
+.fz-36 {
+    font-size: 36px;
+}
+// colors
+.text-main {
+    color: #cbac67;
+}
