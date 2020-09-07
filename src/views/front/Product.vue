@@ -30,14 +30,17 @@
         </ul>
       </div>
       <div class="d-flex align-items-center row mb-6">
-        <img src="https://i.imgur.com/WjRJxGS.jpg" alt class="col-md-6 mr-6" />
+        <img class="col-md-6 mr-6" :src="product.imageUrl[0]" />
         <div class="col-md-5 px-1">
-          <h2 class="text-left mb-4">{{ product.title }}</h2>
+          <h2 class="text-left mb-4 text-main font-weight-bold">{{ product.title }}</h2>
           <p
             class="text-left mb-4"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde cum, eius aperiam optio tenetur, qui corrupti praesentium exercitationem quae libero quia odit dolorem necessitatibus similique iusto error ad. Tenetur?</p>
-          <p class="text-left mb-4">money</p>
-          <button type="button" class="btn btn-danger d-flex justify-content-start">加入購物車</button>
+          >{{ product.content }}</p>
+          <div class="d-flex">
+            <p class="mr-6">{{product.origin_price | money}} 元</p>
+            <p>{{product.price | money}} 元</p>
+          </div>
+          <button type="button" class="btn btn-danger d-flex justify-content-start" @click.prevent="goToCart(product.id)">加入購物車</button>
         </div>
       </div>
       <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
@@ -90,6 +93,7 @@
 
 <script>
 import $ from 'jquery'
+import Alert from '@/alert.js'
 
 export default {
   data () {
@@ -120,6 +124,33 @@ export default {
         .catch((err) => {
           console.log(err.response)
           this.isLoading = false
+        })
+    },
+    goToCart (id, quantity = 1) { // 數量預設值 1
+      this.isLoading = true
+      const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/shopping`
+      const cart = { // api required
+        product: id, // id 透過參數傳入
+        quantity: quantity
+      }
+      this.$http.post(url, cart)
+        .then((res) => {
+          this.$bus.$emit('in-cart') // bus 傳送 emit 接收 on
+          this.isLoading = false
+          Alert.fire({
+            title: '您已成功將商品加入購物車',
+            imageUrl: this.product.imageUrl[0],
+            imageWidth: 510,
+            imageHeight: 340,
+            icon: 'success'
+          })
+        })
+        .catch((err) => {
+          this.isLoading = false
+          Alert.fire({
+            title: `${err.response.data.errors}`,
+            icon: 'warning'
+          })
         })
     }
   },

@@ -51,7 +51,7 @@
         <div class="col-md-9">
           <div id="prductsCard" class="card-columns">
             <div class="card mb-5" v-for="item in filterCategories" :key="item.id">
-              <router-link to="`/product/${ item.id }`">
+              <router-link :to="`/product/${ item.id }`">
                 <img class="card-img-top product-img" :style="{ backgroundImage: `url(${item.imageUrl[0]})` }"/>
               </router-link>
               <div class="card-body">
@@ -64,7 +64,7 @@
               </div>
               <div class="card-footer bg-transparent d-flex justify-content-around p-3">
                 <button type="button" class="btn btn-dark px-3 d-flex" :disabled="status.loadingItem === item.id">
-                  <router-link to="`/product/${ item.id }`" class="text-light text-decoration-none">點擊查看商品</router-link>
+                  <router-link :to="`/product/${ item.id }`" class="text-light text-decoration-none">點擊查看商品</router-link>
                   <i
                       v-if="status.loadingItem === item.id"
                       class="spinner-grow spinner-grow-sm"
@@ -74,9 +74,9 @@
                   type="button"
                   class="btn btn-danger px-3 d-flex"
                   :disabled="status.loadingItem === item.id"
+                  @click.prevent="goToCart(item.id)"
                 >
                   <span class="mr-3">加到購物車</span>
-                  <!--  @click.prevent="goToCart(item.id) -->
                   <span class="material-icons">
                     add_shopping_cart
                     <i
@@ -97,6 +97,7 @@
 </template>
 
 <script>
+import Alert from '@/alert.js'
 import Hot from '@/components/front/Hot.vue'
 import Pagination from '@/components/front/Pagination.vue'
 
@@ -140,6 +141,30 @@ export default {
         .catch((err) => {
           this.isLoading = false
           console.log(err.response)
+        })
+    },
+    goToCart (id, quantity = 1) { // 數量預設值 1
+      this.status.loadingItem = id
+      const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/shopping`
+      const cart = { // api required
+        product: id, // id 透過參數傳入
+        quantity: quantity
+      }
+      this.$http.post(url, cart)
+        .then((res) => {
+          this.$bus.$emit('in-cart') // bus 傳送 emit 接收 on
+          this.status.loadingItem = ''
+          Alert.fire({
+            title: '您已成功將商品加入購物車',
+            icon: 'success'
+          })
+        })
+        .catch((err) => {
+          this.status.loadingItem = ''
+          Alert.fire({
+            title: `${err.response.data.errors}`,
+            icon: 'warning'
+          })
         })
     }
   },
