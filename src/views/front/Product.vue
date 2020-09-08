@@ -33,14 +33,21 @@
         <img class="col-md-6 mr-6" :src="product.imageUrl[0]" />
         <div class="col-md-5 px-1">
           <h2 class="text-left mb-4 text-main font-weight-bold">{{ product.title }}</h2>
-          <p
-            class="text-left mb-4"
-          >{{ product.content }}</p>
+          <p class="text-left mb-4">{{ product.content }}</p>
           <div class="d-flex">
             <p class="mr-6">{{product.origin_price | money}} 元</p>
             <p>{{product.price | money}} 元</p>
           </div>
-          <button type="button" class="btn btn-danger d-flex justify-content-start" @click.prevent="goToCart(product.id)">加入購物車</button>
+          <div class="d-flex">
+            <select name="unit" v-model="product.num" class="px-6 py-1 mr-3">
+              <option :value="num" v-for="num in 5" :key="num">{{ num }} {{ product.unit }}</option>
+            </select>
+            <button
+              type="button"
+              class="btn btn-danger d-flex justify-content-start"
+              @click.prevent="goToCart(product.id, product.num)"
+            >加入購物車</button>
+          </div>
         </div>
       </div>
       <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
@@ -74,17 +81,18 @@
           role="tabpanel"
           aria-labelledby="home-tab"
         >
-        <p class="mb-3">下單後我們會立即確認訂單，並且安排出貨，預計 3~5 天內收到您訂購的商品。</p>
-        <p>凡是購買 KLÁSIKO 全系列錶款，在 2 年保固期間都可以拿到我們服務據點免費維修，超過保固期間也能享有維修折扣。</p>
+          <p class="mb-3">下單後我們會立即確認訂單，並且安排出貨，預計 3~5 天內收到您訂購的商品。</p>
+          <p>凡是購買 KLÁSIKO 全系列錶款，在 2 年保固期間都可以拿到我們服務據點免費維修，超過保固期間也能享有維修折扣。</p>
         </div>
         <div
           class="text-left tab-pane fade"
-          id="contact" role="tabpanel"
+          id="contact"
+          role="tabpanel"
           aria-labelledby="contact-tab"
-          >
+        >
           <p class="mb-3">在網路上購買 KLÁSIKO 全系列錶款，可於收到後七日內退回商品，退換貨運費由 KLÁSIKO 負責。</p>
           <p>若有疑慮也可以直接電洽服務專線 0800-000-000</p>
-          </div>
+        </div>
       </div>
       <h3 class="text-main text-left font-weight-bold mb-6">你可能會喜歡的商品</h3>
     </div>
@@ -113,7 +121,8 @@ export default {
       const { id } = this.$route.params
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/product/${id}`
       this.isLoading = true
-      this.$http.get(url)
+      this.$http
+        .get(url)
         .then((res) => {
           this.product = {
             ...res.data.data,
@@ -126,14 +135,17 @@ export default {
           this.isLoading = false
         })
     },
-    goToCart (id, quantity = 1) { // 數量預設值 1
+    goToCart (id, quantity = 1) {
+      // 數量預設值 1
       this.isLoading = true
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/shopping`
-      const cart = { // api required
+      const cart = {
+        // api required
         product: id, // id 透過參數傳入
         quantity: quantity
       }
-      this.$http.post(url, cart)
+      this.$http
+        .post(url, cart)
         .then((res) => {
           this.$bus.$emit('in-cart') // bus 傳送 emit 接收 on
           this.isLoading = false

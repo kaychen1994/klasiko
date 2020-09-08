@@ -41,11 +41,11 @@
       <div class="series row row-cols-1 row-cols-md-4 mb-5">
         <div class="col mb-4">
           <div class="card mb-2 productShadow">
-            <img src="https://i.imgur.com/sfUzvwX.jpg" class="card-img-top cardImg" alt="..." />
+            <router-link to="/products">
+              <img src="https://i.imgur.com/sfUzvwX.jpg" class="card-img-top cardImg" alt="..." />
+            </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">石英錶</h3>
-              <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.</p>-->
             </div>
             <div class="more">
               <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物</router-link>
@@ -55,11 +55,11 @@
         <!-- 2 -->
         <div class="col mb-4">
           <div class="card mb-2 productShadow">
-            <img src="https://i.imgur.com/h0WumFk.jpg" class="card-img-top cardImg" alt="..." />
+            <router-link to="/products">
+              <img src="https://i.imgur.com/h0WumFk.jpg" class="card-img-top cardImg" alt="..." />
+            </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">潛水錶</h3>
-              <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.</p>-->
             </div>
             <div class="more">
               <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物</router-link>
@@ -69,11 +69,11 @@
         <!-- 3 -->
         <div class="col mb-4">
           <div class="card mb-2 productShadow">
-            <img src="https://i.imgur.com/l0ef0Np.jpg" class="card-img-top cardImg" alt="..." />
+            <router-link to="/products">
+              <img src="https://i.imgur.com/l0ef0Np.jpg" class="card-img-top cardImg" alt="..." />
+            </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">機械錶</h3>
-              <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.</p>-->
             </div>
             <div class="more">
               <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物</router-link>
@@ -83,11 +83,11 @@
         <!-- 4 -->
         <div class="col mb-4">
           <div class="card mb-2 productShadow">
-            <img src="https://i.imgur.com/7MHMaKA.jpg" class="card-img-top cardImg" alt="..." />
+            <router-link to="/products">
+              <img src="https://i.imgur.com/7MHMaKA.jpg" class="card-img-top cardImg" alt="..." />
+            </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">電子錶</h3>
-              <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.</p>-->
             </div>
             <div class="more">
               <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物</router-link>
