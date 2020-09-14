@@ -1,6 +1,6 @@
 // setting
 body {
-    font-family: 'Noto Sans TC', sans-serif !important;
+    font-family: "Noto Sans TC", sans-serif !important;
 }
 .bg-img {
     background-repeat: no-repeat;
@@ -69,10 +69,31 @@ body {
 .fz-20 {
     font-size: 20px;
 }
+.fz-32 {
+    font-size: 32px;
+}
 .fz-36 {
     font-size: 36px;
 }
 // colors
 .text-main {
     color: #cbac67;
+}
+
+// progress
+.process {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #cbac67;
+    border-radius: 99em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.processActive {
+    color: white;
+    background-color: #cbac67;
+}
+.cartImg {
+    width: 100px;
 }

@@ -25,51 +25,85 @@
           <li>購物車</li>
         </ul>
       </div>
-      <!-- process -->
       <!-- cart list -->
-      <button
-        type="button"
-        class="btn btn-danger mb-3"
-        @click.prevent="delAllProducts()"
-      >刪除全部購物車商品</button>
       <div class="row d-flex justify-content-center">
-        <div class="col-md-5">
-          <table class="table mb-5">
+        <div class="col-md-7">
+          <!-- process -->
+          <ul class="d-flex justify-content-around mb-7">
+            <li class="process processActive">
+              <span class="material-icons mb-1">
+                shopping_cart
+              </span>
+              <span>1.確認購物車</span>
+            </li>
+            <li class="process">
+              <span class="material-icons mb-1">
+                wysiwyg
+              </span>
+              <span>2.確認訂單</span>
+            </li>
+            <li class="process">
+              <span class="material-icons mb-1">
+                local_atm
+              </span>
+              <span>3.結帳</span>
+            </li>
+          </ul>
+          <table class="table table-hover mb-5">
             <thead class="thead-light">
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">產品名稱</th>
-                <th scope="col">價格</th>
-                <th scope="col">數量</th>
                 <th scope="col" @click.prevent="delProduct()">刪除</th>
+                <th scope="col">商品圖</th>
+                <th scope="col">產品名稱</th>
+                <th scope="col">數量</th>
+                <th scope="col">價格</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="item in carts" :key="item.product.id + 1">
-                <th scope="row">
-                  <router-link :to="`/product/${ item.product.id }`">
-                    <img :src="item.product.imageUrl[0]" class="cartImg"/>
-                  </router-link>
-                </th>
-                <td>{{item.product.title}}</td>
-                <td>{{item.product.price | money }}</td>
-                <td>{{item.quantity}}</td>
                 <td>
                   <button
                     class="btn btn-outline-danger"
                     @click.prevent="delProduct(item.product.id)"
                     :disabled="status.loadingItem === item.id"
                   >
-                    刪除
+                    <span class="material-icons d-flex align-items-center">
+                      delete_forever
+                    </span>
                     <i v-if="status.loadingItem === item.id" class="spinner-grow spinner-grow-sm"></i>
                   </button>
                 </td>
+                <td>
+                  <router-link :to="`/product/${ item.product.id }`">
+                    <img :src="item.product.imageUrl[0]" class="cartImg"/>
+                  </router-link>
+                </td>
+                <td>{{item.product.title}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.product.price | money }}</td>
               </tr>
             </tbody>
           </table>
-          <div class="d-flex text-danger font-weight-bold">
-            <p>商品總額：</p>
-            <p>{{ cartTotal | money}}</p>
+          <hr class="cartHr mb-2">
+          <div class="d-flex justify-content-end text-danger font-weight-bold mb-3">
+            <!-- <button
+              type="button"
+              class="btn btn-outline-danger mb-3"
+              @click.prevent="delAllProducts()"
+            >刪除全部購物車商品</button> -->
+            <p class="fz-32">商品總額： {{ cartTotal | money}}</p>
+          </div>
+          <div class="d-flex justify-content-between mb-6">
+            <router-link to="/products" class="text-dark text-decoration-none">
+              <button type="button" class="btn btn-outline-warning px-6">
+                繼續購物
+              </button>
+            </router-link>
+            <router-link to="/Order" class="text-light text-decoration-none">
+              <button type="button" class="btn btn-danger px-6">
+                前往下一步
+              </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -178,7 +212,7 @@ export default {
 .cart-bg {
   background-image: url('https://i.imgur.com/MiRu5rc.jpg');
 }
-.cartImg {
-  width: 100px;
+.cartHr {
+  border: 2px solid #cbac67;
 }
 </style>
