@@ -97,3 +97,11 @@ body {
 .cartImg {
     width: 100px;
 }
+.btn-main {
+    background-color: #cbac67;
+    color: white;
+    &:hover {
+        background-color: red;
+        color:white;
+    }  
+}

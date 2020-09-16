@@ -95,12 +95,12 @@
           </div>
           <div class="d-flex justify-content-between mb-6">
             <router-link to="/products" class="text-dark text-decoration-none">
-              <button type="button" class="btn btn-outline-warning px-6">
+              <button type="button" class="btn btn-outline-secondary px-6">
                 繼續購物
               </button>
             </router-link>
             <router-link to="/Order" class="text-light text-decoration-none">
-              <button type="button" class="btn btn-danger px-6">
+              <button type="button" class="btn btn-main px-6">
                 前往下一步
               </button>
             </router-link>

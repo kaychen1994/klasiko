@@ -82,7 +82,7 @@
         <div class="card">
           <img src="https://i.imgur.com/ZE5cm9F.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title text-main font-weight-bold">限量木色石英</h5>
+            <h5 class="card-title text-main font-weight-bold">限量木色石英錶</h5>
             <p
               class="card-text"
             >錶帶由木頭打造，很適合熱愛大自然的愛錶人士收藏，小巧的錶面看起來更加內斂，很適合搭配休閒穿著。</p>

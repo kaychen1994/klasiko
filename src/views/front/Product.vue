@@ -35,16 +35,16 @@
           <h2 class="text-left mb-4 text-main font-weight-bold">{{ product.title }}</h2>
           <p class="text-left mb-4">{{ product.content }}</p>
           <div class="d-flex">
-            <p class="mr-6">{{product.origin_price | money}} 元</p>
-            <p>{{product.price | money}} 元</p>
+            <p class="mr-6 lineThrough text-secondary">{{product.origin_price | money}} 元</p>
+            <p class="font-weight-bold text-danger">{{product.price | money}} 元</p>
           </div>
           <div class="d-flex">
             <select name="unit" v-model="product.num" class="px-6 py-1 mr-3">
-              <option :value="num" v-for="num in 5" :key="num">{{ num }} {{ product.unit }}</option>
+              <option :value="num" v-for="num in 5" :key="num">{{ num }} 隻</option>
             </select>
             <button
               type="button"
-              class="btn btn-danger d-flex justify-content-start"
+              class="btn btn-main d-flex justify-content-start"
               @click.prevent="goToCart(product.id, product.num)"
             >加入購物車</button>
           </div>
@@ -95,6 +95,7 @@
         </div>
       </div>
       <h3 class="text-main text-left font-weight-bold mb-6">你可能會喜歡的商品</h3>
+      <RelatedProducts :product="product" @update="getProduct" />
     </div>
   </div>
 </template>
@@ -102,6 +103,7 @@
 <script>
 import $ from 'jquery'
 import Alert from '@/alert.js'
+import RelatedProducts from '@/components/front/RelatedProducts.vue'
 
 export default {
   data () {
@@ -112,6 +114,9 @@ export default {
         imageUrl: []
       }
     }
+  },
+  components: {
+    RelatedProducts
   },
   created () {
     this.getProduct()

@@ -72,7 +72,7 @@
                 </button>
                 <button
                   type="button"
-                  class="btn btn-danger px-3 d-flex"
+                  class="btn btn-main px-3 d-flex"
                   :disabled="status.loadingItem === item.id"
                   @click.prevent="goToCart(item.id)"
                 >
@@ -89,7 +89,7 @@
             </div>
           </div>
           <!-- pagination 前內後外-->
-          <pagination :pages="pagination" @update="getProducts" class="mb-6"></pagination>
+          <!-- <pagination :pages="pagination" @update="getProducts" class="mb-6"></pagination> -->
         </div>
       </div>
     </div>
@@ -99,13 +99,12 @@
 <script>
 import Alert from '@/alert.js'
 import Hot from '@/components/front/Hot.vue'
-import Pagination from '@/components/front/Pagination.vue'
 
 export default {
   data () {
     return {
       isLoading: false,
-      pagination: {},
+      // pagination: {},
       products: [],
       categories: ['石英錶', '潛水錶', '機械錶', '電子錶'],
       filterCategory: '',
@@ -117,16 +116,15 @@ export default {
     }
   },
   components: {
-    Hot,
-    Pagination
+    Hot
   },
   created () {
     this.getProducts()
   },
   methods: {
-    getProducts (num = 1) {
+    getProducts () {
       this.isLoading = true
-      const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/products?paged=12&page=${num}`
+      const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/products`
       this.$http
         .get(url)
         .then((res) => {

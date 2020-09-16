@@ -79,7 +79,7 @@
           </div>
           <div class="d-flex justify-content-between mb-6">
             <router-link to="/cart" class="text-dark text-decoration-none">
-              <button type="button" class="btn btn-outline-warning px-6">返回購物車</button>
+              <button type="button" class="btn btn-outline-secondary px-6">返回購物車</button>
             </router-link>
           </div>
         </div>
@@ -168,7 +168,7 @@
                   <button  type="button" class="btn btn-outline-info" @click.prevent="addCouponCode">套用</button>
                 </div>
               </div>
-              <button type="submit" class="btn btn-danger px-6" :disabled="invalid">送出訂單</button>
+              <button type="submit" class="btn btn-main px-6" :disabled="invalid">送出訂單</button>
             </form>
           </validation-observer>
         </div>

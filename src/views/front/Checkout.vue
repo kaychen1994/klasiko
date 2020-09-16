@@ -83,6 +83,11 @@
               <p>收貨人電話：{{ order.user.tel }}</p>
               <p>付款方式：{{ order.payment }}</p>
               <p class="text-danger">付款金額：{{ order.amount | money}}</p>
+              <p>
+                付款狀態：
+                <span v-if="!order.paid" class="text-danger font-weight-bold">尚未付款</span>
+                <span v-else class="text-success font-weight-bold">付款完成</span>
+              </p>
             </div>
             <div class="d-flex align-items-end" v-if="order.paid === false">
               <button class="btn btn-danger px-5" @click.prevent="payOrder">確認付款</button>
@@ -90,7 +95,7 @@
             <div class="d-flex justify-content-end align-items-end flex-column" v-if="order.paid === true">
               <span class="text-danger mb-3">※您已付款成功，將於 3~5 個工作日收到訂購商品</span>
               <router-link to="/">
-                <button type="button" class="btn btn-danger">返回首頁</button>
+                <button type="button" class="btn btn-outline-secondary">返回首頁</button>
               </router-link>
             </div>
           </div>
