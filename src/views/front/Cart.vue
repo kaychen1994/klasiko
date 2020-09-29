@@ -63,12 +63,12 @@
               <tr v-for="item in carts" :key="item.product.id + 1">
                 <td>
                   <button
-                    class="btn btn-outline-danger"
+                    class="btn"
                     @click.prevent="delProduct(item.product.id)"
                     :disabled="status.loadingItem === item.id"
                   >
-                    <span class="material-icons d-flex align-items-center">
-                      delete_forever
+                    <span class="material-icons text-danger">
+                      clear
                     </span>
                     <i v-if="status.loadingItem === item.id" class="spinner-grow spinner-grow-sm"></i>
                   </button>

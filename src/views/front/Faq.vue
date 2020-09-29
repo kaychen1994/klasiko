@@ -88,17 +88,17 @@ export default {
     // faq
     $('.answer').hide()
     // 預設讓第一個 li 加上 active
-    $('.faqItem').eq(0).addClass('show')
+    // $('.faqItem').eq(0).addClass('show')
     // 預設讓第一個 li 內文 顯示
-    $('.answer').eq(0).show()
+    $('.answer').show()
     $('.faqItem').click(function (e) {
       e.preventDefault()
       // click 自己的時候顯示自己的 li，關掉其他 li
-      $(this).toggleClass('show').siblings().removeClass('show')
+      // $(this).toggleClass('show').siblings().removeClass('show')
       // 讓自己的 li  切換收合
       $(this).children().next().slideToggle()
       // 讓其他 li  收合
-      $(this).siblings().children().next().slideUp()
+      // $(this).siblings().children().next().slideUp()
     })
   }
 }
@@ -134,6 +134,19 @@ export default {
   .answer {
     background-color: white;
     padding: 22px 0 22px 38px;
+  }
+}
+@media (max-width: 375px) {
+  .faq {
+    .question {
+      padding: 20px 10px;
+      h4 {
+        font-size: 16px;
+      }
+    }
+    .answer {
+      padding: 20px 10px;
+    }
   }
 }
 </style>

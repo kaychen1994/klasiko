@@ -42,8 +42,6 @@
         </div>
       </div>
     </div>
-    <!-- subscribe -->
-    <Subscribe />
     <div class="container">
       <h2 class="h2Title mb-2">時尚穿搭</h2>
       <p class="font-italic mb-6">KLÁSIKO 好錶不僅能掌握時間，也能兼顧時尚</p>
@@ -140,6 +138,8 @@
         </div>
       </div>
     </div>
+    <!-- subscribe -->
+    <Subscribe />
   </div>
 </template>
 

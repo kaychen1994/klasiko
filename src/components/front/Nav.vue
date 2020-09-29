@@ -1,38 +1,47 @@
 <template>
-  <div class="navTemplate d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <h1 class="logo">
         <router-link class="navbar-brand text-main" to="/">KLÁSIKO</router-link>
       </h1>
-      <div class="navMenu d-flex justify-content-between align-items-center">
-        <ul class="fz-20 mr-auto d-flex list-unstyled">
-          <li class="nav-item">
-            <router-link class="nav-link text-light" to="/about">關於我們</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link text-light" to="/products">全系列錶款</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link text-light" to="/news">最新消息</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link text-light" to="/contact">聯絡我們</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link text-light" to="/faq">常見問題</router-link>
-          </li>
-        </ul>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <div
+          class="navMenu d-flex justify-content-between align-items-center"
+          id="navbarToggleExternalContent"
+        >
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 fz-20 mr-auto d-flex list-unstyled">
+            <li class="nav-item">
+              <router-link class="nav-link text-light" to="/about">關於我們</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link text-light" to="/products">全系列錶款</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link text-light" to="/news">最新消息</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link text-light" to="/contact">聯絡我們</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link text-light" to="/faq">常見問題</router-link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <router-link class="cart text-decoration-none mr-5" to="/cart">
-      <span class="material-icons fz-2r text-main">shopping_cart</span>
-    </router-link>
+      <router-link class="cart text-decoration-none mr-sm-2" to="/cart">
+        <span class="material-icons fz-2r text-main">shopping_cart</span>
+      </router-link>
+    </nav>
   </div>
 </template>
-
-<style lang="scss">
-.navTemplate {
-  height: 96px;
-  background: black; // #414547
-}
-</style>

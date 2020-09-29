@@ -10,9 +10,10 @@ body {
     padding: 16px 32px;
     font-family: "Oleo Script", cursive;
     a {
+        color: #cbac67 !important;
         font-size: 48px;
         &:hover {
-            color: #cbac67;
+            color: #cbac67 !important;
         }
     }
 }
@@ -104,4 +105,18 @@ body {
         background-color: red;
         color:white;
     }  
+}
+@media (max-width: 768px) {
+    .h2Title::before,
+    .h2Title::after {
+        display: none;
+    } 
+}
+@media (max-width: 375px) {
+    .h2Title {
+        font-size: 36px;
+    }
+    .topCover h3 {
+        font-size: 36px;
+    }
 }

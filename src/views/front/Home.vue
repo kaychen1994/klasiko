@@ -38,11 +38,11 @@
     <!-- all series -->
     <div class="container">
       <h2 class="h2Title">KLÁSIKO 全系列</h2>
-      <div class="series row row-cols-1 row-cols-md-4 mb-5">
-        <div class="col mb-4">
+      <ul class="series row row-cols-1 row-cols-md-4 mb-5 list-unstyled">
+        <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://i.imgur.com/sfUzvwX.jpg" class="card-img-top cardImg" alt="..." />
+              <img src="https://i.imgur.com/sfUzvwX.jpg" class="card-img-top cardImg" alt="KLÁSIKO" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">石英錶</h3>
@@ -51,9 +51,9 @@
               <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物</router-link>
             </div>
           </div>
-        </div>
+        </li>
         <!-- 2 -->
-        <div class="col mb-4">
+        <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
               <img src="https://i.imgur.com/h0WumFk.jpg" class="card-img-top cardImg" alt="..." />
@@ -65,9 +65,9 @@
               <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物</router-link>
             </div>
           </div>
-        </div>
+        </li>
         <!-- 3 -->
-        <div class="col mb-4">
+        <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
               <img src="https://i.imgur.com/l0ef0Np.jpg" class="card-img-top cardImg" alt="..." />
@@ -79,9 +79,9 @@
               <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物</router-link>
             </div>
           </div>
-        </div>
+        </li>
         <!-- 4 -->
-        <div class="col mb-4">
+        <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
               <img src="https://i.imgur.com/7MHMaKA.jpg" class="card-img-top cardImg" alt="..." />
@@ -93,13 +93,13 @@
               <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物</router-link>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
     <!-- subscribe -->
     <Subscribe />
     <!-- hot -->
-    <div class="container-fluid px-6">
+    <div class="container-fluid px-6 mt-6">
       <h2 class="h2Title">本月熱銷 TOP 10</h2>
       <!-- 這邊插入 hot 元件 -->
       <Hot />
@@ -194,7 +194,7 @@ export default {
   }
 }
 .cardImg {
-  height: 170px;
+  min-height: 190px;
   &:hover {
     opacity: 0.8;
     cursor: pointer;
@@ -216,5 +216,30 @@ export default {
 }
 .productShadow:hover {
   box-shadow: 3px 5px 1px 0px #dedede;
+}
+@media (max-width: 768px) {
+  .service {
+    ul {
+      flex-direction: column;
+      align-items: center;
+      li {
+        margin-bottom: 24px;
+      }
+    }
+    .serviceList {
+      width: 360px;
+    }
+  }
+  .series {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 375px) {
+  .serviceList {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 </style>

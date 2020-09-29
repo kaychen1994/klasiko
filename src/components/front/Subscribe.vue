@@ -1,17 +1,27 @@
 <template>
-  <div class="subscribe d-flex justify-content-around mb-6" id="subscribe">
+  <div class="subscribe d-flex justify-content-around" id="subscribe">
     <div class="subInput d-flex flex-column justify-content-center">
-      <label for="subscribe" class="font-weight-bold text-main fz-36 mb-5">訂閱我們，獲得更多優惠通知～</label>
-      <input id="subscribe" type="text" placeholder="輸入 email 訂閱" class="mb-5" />
+      <label for="subscribe" class="font-weight-bold text-main mb-5"
+        >訂閱我們，獲得更多優惠通知～</label
+      >
+      <input
+        id="subscribe"
+        type="text"
+        placeholder="輸入 email 訂閱"
+        class="mb-5"
+      />
       <button type="button" class="btn btn-danger px-3 py-1">訂閱</button>
     </div>
-    <img src="https://i.imgur.com/3JB2dlF.jpg" alt />
+    <img src="https://i.imgur.com/3JB2dlF.jpg" alt="subscribe" />
   </div>
 </template>
 
 <style lang="scss">
 .subscribe {
   background: #fafafa;
+  label {
+    font-size: 36px;
+  }
   img {
     height: 384px;
   }
@@ -28,6 +38,21 @@
       border-bottom-right-radius: 50px;
       transition: all 2s;
     }
+  }
+}
+@media (max-width: 768px) {
+  .subscribe {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    img {
+      display: none;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .subInput {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 </style>

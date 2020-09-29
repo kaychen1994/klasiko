@@ -165,7 +165,7 @@
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="輸入優惠碼" v-model="coupon_code">
                 <div class="input-group-append">
-                  <button  type="button" class="btn btn-outline-info" @click.prevent="addCouponCode">套用</button>
+                  <button  type="button" class="btn btn-outline-secondary" @click.prevent="addCouponCode">套用</button>
                 </div>
               </div>
               <button type="submit" class="btn btn-main px-6" :disabled="invalid">送出訂單</button>

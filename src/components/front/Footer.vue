@@ -25,4 +25,10 @@
   justify-content: space-around;
   background: black;
 }
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>

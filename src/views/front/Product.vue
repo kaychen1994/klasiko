@@ -53,7 +53,7 @@
       <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <a
-            class="nav-link active"
+            class="nav-link tab-active"
             id="home-tab"
             data-toggle="tab"
             href="#home"
@@ -64,7 +64,7 @@
         </li>
         <li class="nav-item" role="presentation">
           <a
-            class="nav-link"
+            class="nav-link tab-active"
             id="contact-tab"
             data-toggle="tab"
             href="#contact"
@@ -186,5 +186,11 @@ export default {
 }
 .productTitle {
   font-family: 'Noto Sans TC', sans-serif;
+}
+.tab-active {
+  color: #cbac67;
+  &:hover {
+    color: red;
+  }
 }
 </style>
