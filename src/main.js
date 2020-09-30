@@ -20,8 +20,8 @@ import $ from 'jquery'
 import App from './App.vue'
 import router from './router'
 import moneyFilter from './filter/money'
+import './bus'
 
-Vue.prototype.$bus = new Vue()
 Vue.config.productionTip = false
 Vue.component('Loading', Loading)
 Vue.use(VueAxios, axios)

@@ -19,17 +19,17 @@
       <h2 class="h2Title">KLÁSIKO 的特色</h2>
       <ul class="d-flex justify-content-around list-unstyled">
         <li class="serviceList">
-          <img src="images/fix.svg" alt />
+          <img src="images/fix.svg" alt="KLÁSIKO 保固" />
           <span>2 年保固</span>
           <p>提供長達 2 年的免費保固服務，不限會員資格皆享有專業維修服務，超過保固期也享有維修折扣。</p>
         </li>
         <li class="serviceList">
-          <img src="images/like.svg" alt />
+          <img src="images/like.svg" alt="KLÁSIKO 品質" />
           <span>品質保證</span>
           <p>KLÁSIKO 只賣正品，絕對都是從瑞士、日本進口的時尚腕錶，在 KLÁSIKO 不用怕買到假貨。</p>
         </li>
         <li class="serviceList">
-          <img src="images/money.svg" alt />
+          <img src="images/money.svg" alt="KLÁSIKO 價格" />
           <span>價格公道</span>
           <p>全台最優惠的正品進口腕錶，只在 KLÁSIKO ，歡迎比價，網購滿 $8,800 免運費。</p>
         </li>
@@ -42,7 +42,7 @@
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://i.imgur.com/sfUzvwX.jpg" class="card-img-top cardImg" alt="KLÁSIKO" />
+              <img src="https://i.imgur.com/sfUzvwX.jpg" class="card-img-top cardImg" alt="石英錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">石英錶</h3>
@@ -56,7 +56,7 @@
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://i.imgur.com/h0WumFk.jpg" class="card-img-top cardImg" alt="..." />
+              <img src="https://i.imgur.com/h0WumFk.jpg" class="card-img-top cardImg" alt="潛水錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">潛水錶</h3>
@@ -70,7 +70,7 @@
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://i.imgur.com/l0ef0Np.jpg" class="card-img-top cardImg" alt="..." />
+              <img src="https://i.imgur.com/l0ef0Np.jpg" class="card-img-top cardImg" alt="機械錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">機械錶</h3>
@@ -84,7 +84,7 @@
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://i.imgur.com/7MHMaKA.jpg" class="card-img-top cardImg" alt="..." />
+              <img src="https://i.imgur.com/7MHMaKA.jpg" class="card-img-top cardImg" alt="電子錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">電子錶</h3>

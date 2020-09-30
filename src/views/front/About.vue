@@ -20,7 +20,7 @@
       <div class="row d-flex align-items-center justify-content-around mb-6">
         <img
           src="https://images.unsplash.com/photo-1573148476075-c9935202f573?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
-          alt
+          alt="KLÁSIKO"
           class="col-md-5"
         />
         <div class="aboutInfo col-md-5 fz-20 text-left aboutBorder">
@@ -33,14 +33,14 @@
         <div class="aboutInfo col-md-5 fz-20 text-left aboutBorder">KLÁSIKO 要求完美，堅持採用最好的材質精心打造每一隻腕錶，讓 KLÁSIKO 的經典可以永流傳。</div>
         <img
           src="https://images.unsplash.com/photo-1582043568223-338d62fc01fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          alt
+          alt="KLÁSIKO"
           class="col-md-5"
         />
       </div>
       <div class="row d-flex align-items-center justify-content-around mb-6">
         <img
           src="https://images.unsplash.com/photo-1482775907821-a56ec43344fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80"
-          alt
+          alt="KLÁSIKO"
           class="col-md-5"
         />
         <div class="aboutInfo col-md-5 fz-20 text-left aboutBorder">KLÁSIKO 追求創新也同時保留經典，讓您手中的腕錶不被時代淘汰掉，您值得擁有最完美的腕錶。</div>

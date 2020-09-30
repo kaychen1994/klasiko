@@ -19,21 +19,21 @@
       <div class="lastestNews mb-6">
         <div class="row">
           <div class="col-md-4">
-            <img src="https://i.imgur.com/lCNtBsm.jpg" alt class="mb-3 newsImg" />
+            <img src="https://i.imgur.com/lCNtBsm.jpg" alt="七月份限時優惠" class="mb-3 newsImg" />
             <h4 class="mb-2 font-weight-bold text-danger">七月份限時優惠</h4>
             <p class="mb-3 text-secondary">2020/07/01</p>
             <p>07/01 ~ 07/31 限時！全館石英錶款 77 折。</p>
             <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物 >></router-link>
           </div>
           <div class="col-md-4">
-            <img src="https://i.imgur.com/q7uAW8L.jpg" alt class="mb-3 newsImg" />
+            <img src="https://i.imgur.com/q7uAW8L.jpg" alt="父親節優惠" class="mb-3 newsImg" />
             <h4 class="mb-2 font-weight-bold text-danger">父親節優惠</h4>
             <p class="mb-3 text-secondary">2020/08/02</p>
             <p>歡慶 88 節，任選一隻男錶立即享有 88 折優惠。</p>
             <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物 >></router-link>
           </div>
           <div class="col-md-4">
-            <img src="https://i.imgur.com/pJQEqdo.jpg" alt class="mb-3 newsImg" />
+            <img src="https://i.imgur.com/pJQEqdo.jpg" alt="對錶限時優惠" class="mb-3 newsImg" />
             <h4 class="mb-2 font-weight-bold text-danger">對錶限時優惠</h4>
             <p class="mb-3 text-secondary">2020/08/23</p>
             <p>8/31 前全館對錶 7 折，送他/她最棒的七夕禮物。</p>
@@ -78,7 +78,7 @@
         </div>
         <!-- 4 -->
         <div class="card">
-          <img src="https://i.imgur.com/ZE5cm9F.jpg" class="card-img-top" alt="..." />
+          <img src="https://i.imgur.com/ZE5cm9F.jpg" class="card-img-top" alt="石英錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">限量木色石英錶</h5>
             <p
@@ -88,7 +88,7 @@
         </div>
         <!-- 5 -->
         <div class="card">
-          <img src="https://i.imgur.com/GWXnpEx.jpg" class="card-img-top" alt="..." />
+          <img src="https://i.imgur.com/GWXnpEx.jpg" class="card-img-top" alt="潛水錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">型男必備潛水錶</h5>
             <p
@@ -98,7 +98,7 @@
         </div>
         <!-- 6 -->
         <div class="card">
-          <img src="https://i.imgur.com/DR28vRm.jpg" class="card-img-top" alt="..." />
+          <img src="https://i.imgur.com/DR28vRm.jpg" class="card-img-top" alt="休閒錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">玫瑰金休閒錶</h5>
             <p
@@ -108,7 +108,7 @@
         </div>
         <!-- 7 -->
         <div class="card">
-          <img src="https://i.imgur.com/7iRD6GM.jpg" class="card-img-top" alt="..." />
+          <img src="https://i.imgur.com/7iRD6GM.jpg" class="card-img-top" alt="計時錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">金色錶帶計時錶</h5>
             <p
@@ -118,7 +118,7 @@
         </div>
         <!-- 8 -->
         <div class="card">
-          <img src="https://i.imgur.com/C3vaLWB.jpg" class="card-img-top" alt="..." />
+          <img src="https://i.imgur.com/C3vaLWB.jpg" class="card-img-top" alt="經典錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">淑女必備經典錶</h5>
             <p
@@ -128,7 +128,7 @@
         </div>
         <!-- 9 -->
         <div class="card">
-          <img src="https://i.imgur.com/hVXuLaN.jpg" class="card-img-top" alt="..." />
+          <img src="https://i.imgur.com/hVXuLaN.jpg" class="card-img-top" alt="機械錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">精緻工藝機械錶</h5>
             <p

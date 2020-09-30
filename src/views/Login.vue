@@ -14,7 +14,7 @@
     <div class="row">
       <div class="loginBanner col-md-4">
         <h1 class="mb-5">KLÁSIKO</h1>
-        <img src="https://upload.cc/i1/2020/07/16/AqkJsj.png" alt />
+        <img src="https://upload.cc/i1/2020/07/16/AqkJsj.png" alt="klasiko" />
       </div>
       <validation-observer
         v-slot="{ invalid }"

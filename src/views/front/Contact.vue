@@ -47,7 +47,7 @@
           <img
             src="https://images.unsplash.com/photo-1527001929378-edd8dea61a06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
             class="card-img-top"
-            alt="..."
+            alt="KLÁSIKO 旗艦店"
           />
           <div class="card-body">
             <h3 class="card-title font-weight-bold text-main">台北 101 旗艦店</h3>
@@ -86,7 +86,7 @@
           <img
             src="https://images.unsplash.com/photo-1526743655626-e3d757b13d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
             class="card-img-top"
-            alt="..."
+            alt="KLÁSIKO 分店"
           />
           <div class="card-body">
             <h3 class="card-title font-weight-bold text-main">台中廣三 SOGO 分店</h3>
@@ -125,7 +125,7 @@
           <img
             src="https://images.unsplash.com/photo-1444881421460-d838c3b98f95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
             class="card-img-top"
-            alt="..."
+            alt="KLÁSIKO 分店"
           />
           <div class="card-body">
             <h3 class="card-title font-weight-bold text-main">高雄左營新光三越分店</h3>
