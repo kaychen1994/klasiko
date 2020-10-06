@@ -58,7 +58,6 @@
           </validation-provider>
           <button type="submit" class="btn btn-dark btn-lg loginBtn mt-5" :disabled="invalid">Login</button>
           <p class="mt-5">© 2020 Watches Store</p>
-          <!-- <div class="btn" @click="getData">get</div> -->
         </form>
       </validation-observer>
     </div>
@@ -79,7 +78,6 @@ export default {
   },
   methods: {
     login () {
-      // const apiPath = 'https://course-ec-api.hexschool.io/api/';
       const api = `${process.env.VUE_APP_APIPATH}auth/login`
       this.isLoading = true
       this.$http

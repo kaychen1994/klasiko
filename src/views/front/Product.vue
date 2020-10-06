@@ -53,7 +53,7 @@
       <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <a
-            class="nav-link tab-active"
+            class="nav-link active tab-active"
             id="home-tab"
             data-toggle="tab"
             href="#home"

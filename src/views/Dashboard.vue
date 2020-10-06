@@ -4,7 +4,7 @@
       <div class="row">
         <Menu class="col-md-2"></Menu>
         <main role="main" class="col-md-9 px-4 m-auto">
-          <router-view v-if="isSuccess" :token="token" />
+          <router-view v-if="isSuccess" />
         </main>
       </div>
     </div>

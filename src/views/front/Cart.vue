@@ -26,7 +26,7 @@
         </ul>
       </div>
       <!-- cart list -->
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center" v-if="carts.length > 0">
         <div class="col-md-7">
           <!-- process -->
           <ul class="d-flex justify-content-around mb-7">
@@ -86,11 +86,6 @@
           </table>
           <hr class="cartHr mb-2">
           <div class="d-flex justify-content-end text-danger font-weight-bold mb-3">
-            <!-- <button
-              type="button"
-              class="btn btn-outline-danger mb-3"
-              @click.prevent="delAllProducts()"
-            >刪除全部購物車商品</button> -->
             <p class="fz-32">商品總額： {{ cartTotal | money}}</p>
           </div>
           <div class="d-flex justify-content-between mb-6">
@@ -107,12 +102,23 @@
           </div>
         </div>
       </div>
+      <div v-else>
+        <div>
+          <h3 class="mb-6">您尚未加入商品至購物車</h3>
+          <button type="button" class="btn btn-main mb-6">
+            <router-link class="text-decoration-none text-light" to="/products">繼續逛逛</router-link>
+          </button>
+        </div>
+        <h2 class="h2Title">本月熱銷 TOP 10</h2>
+        <Hot />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Alert from '@/alert.js'
+import Hot from '@/components/front/Hot.vue'
 export default {
   data () {
     return {
@@ -131,6 +137,9 @@ export default {
         loadingItem: '' // 先給預設值才不會出錯
       }
     }
+  },
+  components: {
+    Hot
   },
   created () {
     this.getCart()

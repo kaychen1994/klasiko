@@ -69,3 +69,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.navMenu li :hover{
+  border-bottom: 3px solid white;
+}
+</style>

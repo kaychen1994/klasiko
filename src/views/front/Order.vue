@@ -124,7 +124,7 @@
                     name="收件人電話"
                     v-model="form.tel"
                     class="form-control"
-                    id="tel"
+                    id="phone"
                     placeholder="收件人電話"
                     :class="classes"
                   />
@@ -133,7 +133,7 @@
               </div>
               <div class="form-group">
                 <validation-provider v-slot="{ errors, classes }" rules="required|min:10">
-                  <label for="phone">收件人地址</label>
+                  <label for="address">收件人地址</label>
                   <input
                     type="text"
                     name="收件人地址"
