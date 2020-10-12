@@ -12,7 +12,7 @@
       </template>
     </loading>
     <!-- order list -->
-    <table class="table table-hover">
+    <table class="table table-hover my-6">
       <thead class="thead-dark">
         <tr>
           <th scope="col">下單時間</th>
@@ -34,7 +34,7 @@
             </ul>
           </td>
           <td>{{ item.payment }}</td>
-          <td>{{ item.amount }}</td>
+          <td>{{ item.amount | money }}</td>
           <td>
             <div class="custom-control custom-switch">
               <input

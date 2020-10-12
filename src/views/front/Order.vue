@@ -11,10 +11,16 @@
         </div>
       </template>
     </loading>
-    <div class="topCover order-bg bg-img d-flex">
+    <div class="topCover order-bg bg-img d-flex mb-3">
       <h3 class="coverTitle">Order</h3>
     </div>
     <div class="container-fluid">
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        輸入優惠碼 <strong>discount5</strong> ， 立即享有 95 折優惠
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
@@ -74,8 +80,13 @@
             </tbody>
           </table>
           <hr class="cartHr mb-2" />
-          <div class="d-flex justify-content-end text-danger font-weight-bold mb-3">
-            <p class="fz-32">商品總額： {{ cartTotal | money}}</p>
+          <div class="d-flex justify-content-end font-weight-bold mb-3">
+            <ul v-if="coupon.enabled" class="list-unstyled text-right">
+              <li>商品總額： {{ cartTotal | money}}</li>
+              <li class="mb-3">優惠折扣：- {{ cartTotal * [ 1- (coupon.percent / 100)] | money }}</li>
+              <li class="fz-32 text-danger">總計：{{ cartTotal * (coupon.percent / 100) | money}}</li>
+            </ul>
+            <p class="fz-32 text-danger" v-else>總計： {{ cartTotal | money}}</p>
           </div>
           <div class="d-flex justify-content-between mb-6">
             <router-link to="/cart" class="text-dark text-decoration-none">
@@ -234,6 +245,9 @@ export default {
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/orders`
       this.isLoading = true
       const order = { ...this.form }
+      if (this.coupon.enabled) {
+        order.coupon = this.coupon.code
+      }
       this.$http.post(url, order)
         .then((res) => {
           this.getCart()
@@ -254,17 +268,27 @@ export default {
           this.getCart()
           this.coupon = res.data.data
           Alert.fire({
-            title: '優惠券已加入',
+            title: '優惠券已啟用',
             icon: 'success'
           })
         })
         .catch((err) => {
           this.isLoading = false
-          console.log(err.response.data)
-          Alert.fire({
-            title: `${err.response.data.errors}`,
-            icon: 'warning'
-          })
+          const errorData = err.response.data.errors
+          if (errorData) {
+            errorData.code.forEach((errmsg) => {
+              Alert.fire({
+                title: `${errmsg}`,
+                icon: 'error'
+              })
+            })
+          } else {
+            const { message } = err.response.data
+            Alert.fire({
+              title: `${message}`,
+              icon: 'error'
+            })
+          }
         })
     }
   }
