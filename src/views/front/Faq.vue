@@ -106,7 +106,7 @@ export default {
 
 <style lang="scss">
 .faq-bg {
-  background-image: url('https://i.imgur.com/jnyaTNb.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/HtmU3ZY2mJ2nwNaKLHC9ysDTKfqwynOUMloR692C2SpqzdBt4GzKQYk86u1nPiZidJsvhoOocHK49No2nRaiGYoQLAUNqsVWuZgURU5VRNE4IQFnLxdXIyTrOODx7RyZ.jpg');
 }
 .faq {
   h4 {

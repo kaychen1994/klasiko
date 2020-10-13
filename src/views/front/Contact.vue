@@ -45,7 +45,7 @@
       <div class="location mb-6 d-flex justify-content-between">
         <div class="card" style="width: 24rem;">
           <img
-            src="https://images.unsplash.com/photo-1527001929378-edd8dea61a06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/dRdCZgSnvEcP7OViwEMqJxEXcqmMKXbuIPYtNLjGEhNGEguynitBirVTn9jH2AHmjMcY38piL1PBLQx4TXvzQjP9L3rveFCPlYb9HlrFxzyfVEAhg4XA20IBleHJbEiY.jpg"
             class="card-img-top"
             alt="KLÁSIKO 旗艦店"
           />
@@ -84,7 +84,7 @@
       <div class="location mb-6 d-flex justify-content-between">
         <div class="card" style="width: 24rem;">
           <img
-            src="https://images.unsplash.com/photo-1526743655626-e3d757b13d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/vpElXHYZGipTOMSMJtbNsxQ2TAoBwZM1dDJldNRjZgWboGsAh9rdJtuE9ExdTs2L1Vg0bK9bKtSIIHyiOMp8Vl3izUYAozZhvbMZmbKddy4abODY5aILpqJTba9MVPVr.jpg"
             class="card-img-top"
             alt="KLÁSIKO 分店"
           />
@@ -123,7 +123,7 @@
       <div class="location mb-6 d-flex justify-content-between">
         <div class="card" style="width: 24rem;">
           <img
-            src="https://images.unsplash.com/photo-1444881421460-d838c3b98f95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
+            src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/XTUCr6fEApmGmfoBQ1LpEu4lyTFnY22ZpwuIrFUXVoqhrGtl1wxaz3aZZX1pLb8ChRj0TUutsZWOoTMKXpVuGNoNnyZdYNlK7KmhpTX7zRwWclpEyjp0rMVOTiuI8Ew7.jpg"
             class="card-img-top"
             alt="KLÁSIKO 分店"
           />
@@ -164,7 +164,7 @@
 
 <style lang="scss">
 .contact-bg {
-  background-image: url('https://i.imgur.com/eeF5q9Q.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/xvDzlfE2qz92ldRY2YVMq4H5EJGbDGgWazbU9AUuZt0JR7YD75PksxtPAkWy3k8QEQHEQdtbVrSmgEJnBKJP21w0s7H3UE0FIwGkkyyIfCpYpS905T7GhNwLccrgxOty.jpg');
 }
 .location {
   .card-body {

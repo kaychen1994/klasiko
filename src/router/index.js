@@ -84,6 +84,11 @@ const routes = [
         component: () => import('../views/admin/Image.vue')
       }
     ]
+  },
+  {
+    path: '*',
+    name: 'not-found',
+    component: () => import('../views/NotFound.vue')
   }
 ]
 

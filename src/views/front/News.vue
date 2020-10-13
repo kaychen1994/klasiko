@@ -19,21 +19,21 @@
       <div class="lastestNews mb-6">
         <div class="row">
           <div class="col-md-4">
-            <img src="https://i.imgur.com/lCNtBsm.jpg" alt="七月份限時優惠" class="mb-3 newsImg" />
+            <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/QqHyorydvRCZZ5kqKcsNcjTPtXPtsZCBJxPxnlYrFXvPlMXoYHOFgppJZIlMm3xNxBoLjxcwmOvhgq0ZvP0L8IcniLtP9SjUPjk4TpwIdHdozCOH4x3xT4tTwYMA8D1H.jpg" alt="七月份限時優惠" class="mb-3 newsImg" />
             <h4 class="mb-2 font-weight-bold text-danger">七月份限時優惠</h4>
             <p class="mb-3 text-secondary">2020/07/01</p>
             <p>07/01 ~ 07/31 限時！全館石英錶款 77 折。</p>
             <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物 >></router-link>
           </div>
           <div class="col-md-4">
-            <img src="https://i.imgur.com/q7uAW8L.jpg" alt="父親節優惠" class="mb-3 newsImg" />
+            <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/uP7q17Qk7zCizsZT2nHF2b5oJ3ojtTMSxlO0YJQlyQ6mc4xcWOVb798HfvhfgqO9nxeKDQZGoRGCruycwUNLEGLiVJwhXw0uJMkjKcoU8fong9IgzhOlJgEGJPVsIjrp.jpg" alt="父親節優惠" class="mb-3 newsImg" />
             <h4 class="mb-2 font-weight-bold text-danger">父親節優惠</h4>
             <p class="mb-3 text-secondary">2020/08/02</p>
             <p>歡慶 88 節，任選一隻男錶立即享有 88 折優惠。</p>
             <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物 >></router-link>
           </div>
           <div class="col-md-4">
-            <img src="https://i.imgur.com/pJQEqdo.jpg" alt="對錶限時優惠" class="mb-3 newsImg" />
+            <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/MvzJGhZIHsi3Yb6brE7FeD8BI30ISggFblyqhTcAEOr8klTn9BEW8mEYjma99YUg8vxqwUr6vDSDBOFXpV7Ed1JHuikxelVcHPHThfaPUvixZTBhxoFGToRXhh1d1f3i.jpg" alt="對錶限時優惠" class="mb-3 newsImg" />
             <h4 class="mb-2 font-weight-bold text-danger">對錶限時優惠</h4>
             <p class="mb-3 text-secondary">2020/08/23</p>
             <p>8/31 前全館對錶 7 折，送他/她最棒的七夕禮物。</p>
@@ -48,7 +48,7 @@
       <div class="card-columns mb-6">
         <!-- 1 -->
         <div class="card">
-          <img src="https://i.imgur.com/nKYcUW9.jpg" class="card-img-top" alt="石英錶" />
+          <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/mJO2v5Q3pqgtMQGDoh7twErSRQJ7F0ZSVIC0MR1NyvlI9fLzRkMAUi5kBY3K778jDlvmy5pIZQuVDv4xArwW2VtLBojcogiids0NPBXqNEwdoptjCBwHIv4FxVMJKExj.jpg" class="card-img-top" alt="石英錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">棕色皮革簡約石英錶</h5>
             <p
@@ -58,7 +58,7 @@
         </div>
         <!-- 2 -->
         <div class="card">
-          <img src="https://i.imgur.com/OjKhf1D.jpg" class="card-img-top" alt="計時錶" />
+          <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/J9ylHUZUw7ZvCRMxL8dxgdFsD1FYllSCa8PWq9Z2r10R54tAd6KgFC9FA8gI0NbmF1ckiaIUN7bZf7Vg5fGaFkAiNqcAC2YqImbE9pLcExzTTYD00jjLNmmC79Pop96S.jpg" class="card-img-top" alt="計時錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">素色復古計時錶</h5>
             <p
@@ -68,7 +68,7 @@
         </div>
         <!-- 3 -->
         <div class="card">
-          <img src="https://i.imgur.com/7NojIA6.jpg" class="card-img-top" alt="經典錶" />
+          <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/XkLKH136YxmiKUC1M3VBZLZztn2ur3TjQecpTjyYG75uPIihZUyZKVa43CPXnkDTV159jSsYk69ImbmhbrTznQLfM4LixHttxghTUM4A2zX7qBNMEYTP2xhZ3JLgyJf2.jpg" class="card-img-top" alt="經典錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">黑色皮革經典錶</h5>
             <p
@@ -78,7 +78,7 @@
         </div>
         <!-- 4 -->
         <div class="card">
-          <img src="https://i.imgur.com/ZE5cm9F.jpg" class="card-img-top" alt="石英錶" />
+          <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/bqO39qGNiM7ybDomS2eXYro1T7VZ64PHB68ixoaiidbjYm50C1AZrvTsTc26Qjaoe8gLbzgRszlqjT070jU94TH67f9oC5L8QAA8iDsBsHY1atWucK0qGA290s7jqyy2.jpg" class="card-img-top" alt="石英錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">限量木色石英錶</h5>
             <p
@@ -88,7 +88,7 @@
         </div>
         <!-- 5 -->
         <div class="card">
-          <img src="https://i.imgur.com/GWXnpEx.jpg" class="card-img-top" alt="潛水錶" />
+          <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/9Wxb4cqvLCv5Co7QrTawrqS2NlWtf88O3A7RU5nYQ051XooZKILAC58dmxVuqMejR2Ihd3D2MCGccxnMewyJKOZL0pEWLU10dWoqAaiqXnrXAZXM2RKgZLaaBnCVs93C.jpg" class="card-img-top" alt="潛水錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">型男必備潛水錶</h5>
             <p
@@ -98,7 +98,7 @@
         </div>
         <!-- 6 -->
         <div class="card">
-          <img src="https://i.imgur.com/DR28vRm.jpg" class="card-img-top" alt="休閒錶" />
+          <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/YkgbobS1pVKFIV0hP73EkAk5mXZOLuOXcrUlGQcmDmIDtmZ1ue8XdyFPxdsoI7dWJRkO4GaFVIk3wtJCOchCOVgbeRQGyKKKNttH6ppUc7KSxlrhcCZYQo9EG1DTYcMl.jpg" class="card-img-top" alt="休閒錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">玫瑰金休閒錶</h5>
             <p
@@ -108,7 +108,7 @@
         </div>
         <!-- 7 -->
         <div class="card">
-          <img src="https://i.imgur.com/7iRD6GM.jpg" class="card-img-top" alt="計時錶" />
+          <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/JXx1f67CmgQPDOD2vV09p5cWoOiJg6AcxgerPof99k3L4QyMXV3V7VUFZjXazjWBTWPBa3SKyQnceqVqGxHD0OB9hiXcJ841Q3yifUJLdKywgUgaX6BdZC5nGnjfSfvd.jpg" class="card-img-top" alt="計時錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">金色錶帶計時錶</h5>
             <p
@@ -118,7 +118,7 @@
         </div>
         <!-- 8 -->
         <div class="card">
-          <img src="https://i.imgur.com/C3vaLWB.jpg" class="card-img-top" alt="經典錶" />
+          <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/PYCXvMZLcqLDj7NMTkF1xDWrcb9hHqO11fvLjaxVBHNeYqK989oiiHYUaaCyoaxy23BCPX3Q0UHrE305HOXHolkSpqTY7gblMqul06xrpddhXJVce4yQJFGx3AAV0F9s.jpg" class="card-img-top" alt="經典錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">淑女必備經典錶</h5>
             <p
@@ -128,7 +128,7 @@
         </div>
         <!-- 9 -->
         <div class="card">
-          <img src="https://i.imgur.com/hVXuLaN.jpg" class="card-img-top" alt="機械錶" />
+          <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/zN1BMGLHVfvoWlvUQNDIE3NvtiWsesBWQFAAblD3dHlM2IYFkRZKNsJoNHKNrdwqRuLjYAA1VqlPYmaH9sqIESPxej1xzFN4Yckid0go9DqXH6Uzafxn1aoDksRLbO3y.jpg" class="card-img-top" alt="機械錶" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">精緻工藝機械錶</h5>
             <p
@@ -157,7 +157,7 @@ export default {
 
 <style lang="scss">
 .news-bg {
-  background-image: url('https://i.imgur.com/0pxYDPe.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/cthRPAKReYcqxdzGIYFNlJehnaCVRyhBnRSkHWYDtenYWux7Tz5XUFYL9TnIomnfYS8akNuIgYACT9iCal2YhlC4U7FXfgsRpIpKQ4QIVUTwsIIhQopPTn793wvcoGRz.jpg');
 }
 .newsImg {
   width: 100%;

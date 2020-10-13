@@ -184,7 +184,7 @@ export default {
 
 <style lang="scss">
 .products-bg {
-  background-image: url('https://i.imgur.com/1kCPkX3.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/c4f6aWCgCb64rP78r6H4WcwpVIBCnF3XvIPUx7thXYPYVftNOIXdO7cGEEAhYcc2FmVCHaVNYjAFu47oficMfkIB5Sf6rmVD2ltaXmvGkjw53UhsKuTuKo91OGeN3I9n.jpg');
 }
 .product-img {
   height: 300px;
