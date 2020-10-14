@@ -18,14 +18,14 @@
       <!-- lastestNews -->
       <div class="lastestNews mb-6">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 mb-sm-3">
             <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/QqHyorydvRCZZ5kqKcsNcjTPtXPtsZCBJxPxnlYrFXvPlMXoYHOFgppJZIlMm3xNxBoLjxcwmOvhgq0ZvP0L8IcniLtP9SjUPjk4TpwIdHdozCOH4x3xT4tTwYMA8D1H.jpg" alt="七月份限時優惠" class="mb-3 newsImg" />
             <h4 class="mb-2 font-weight-bold text-danger">七月份限時優惠</h4>
             <p class="mb-3 text-secondary">2020/07/01</p>
             <p>07/01 ~ 07/31 限時！全館石英錶款 77 折。</p>
             <router-link class="text-decoration-none text-main font-weight-bold" to="/products">前往購物 >></router-link>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 mb-sm-3">
             <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/uP7q17Qk7zCizsZT2nHF2b5oJ3ojtTMSxlO0YJQlyQ6mc4xcWOVb798HfvhfgqO9nxeKDQZGoRGCruycwUNLEGLiVJwhXw0uJMkjKcoU8fong9IgzhOlJgEGJPVsIjrp.jpg" alt="父親節優惠" class="mb-3 newsImg" />
             <h4 class="mb-2 font-weight-bold text-danger">父親節優惠</h4>
             <p class="mb-3 text-secondary">2020/08/02</p>

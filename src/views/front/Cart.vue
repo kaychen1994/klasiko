@@ -169,7 +169,7 @@ export default {
       this.carts.forEach((item) => {
         total += item.product.price * item.quantity
       })
-      this.cartTotal = total // 購物車總價格
+      this.cartTotal = total
     },
     delAllProducts () {
       this.isLoading = true
@@ -178,6 +178,7 @@ export default {
         .delete(url)
         .then(() => {
           this.isLoading = false
+          this.$bus.$emit('in-cart')
           this.getCart()
           Alert.fire({
             title: '購物車商品已全部刪除',
@@ -199,6 +200,7 @@ export default {
         .delete(url)
         .then(() => {
           this.isLoading = false
+          this.$bus.$emit('in-cart')
           this.getCart()
           Alert.fire({
             title: '購物車商品已全部刪除',

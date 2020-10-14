@@ -49,8 +49,8 @@
           </div>
         </div>
         <div class="col-md-9">
-          <div id="prductsCard" class="card-columns">
-            <div class="card mb-5" v-for="item in filterCategories" :key="item.id">
+          <div id="prductsCard" class="card-columns row">
+            <div class="card mb-5 col-md-11" v-for="item in filterCategories" :key="item.id">
               <router-link :to="`/product/${ item.id }`">
                 <img class="card-img-top product-img" :style="{ backgroundImage: `url(${item.imageUrl[0]})` }"/>
               </router-link>

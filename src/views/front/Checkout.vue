@@ -142,7 +142,7 @@ export default {
       this.$http.post(url)
         .then((res) => {
           this.getOrder()
-          console.log('您已付款成功')
+          this.$bus.$emit('in-cart')
           Alert.fire({
             title: '您已付款成功',
             icon: 'success'

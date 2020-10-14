@@ -227,7 +227,7 @@ export default {
       this.carts.forEach((item) => {
         total += item.product.price * item.quantity
       })
-      this.cartTotal = total // 購物車總價格
+      this.cartTotal = total
     },
     addOrder () {
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/orders`

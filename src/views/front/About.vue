@@ -71,7 +71,7 @@ export default {
   border: 2px solid #cbac67;
   padding: 16px 16px;
 }
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .aboutInfo {
     margin: 20px 10px;
   }
