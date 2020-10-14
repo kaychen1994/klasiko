@@ -42,8 +42,8 @@
       </div>
       <h2 class="h2Title">聯絡我們</h2>
       <!-- location -->
-      <div class="location mb-6 row px-2">
-        <div class="card contactCard col-lg-5 col-md-11">
+      <div class="mb-6 row px-2 d-flex flex-column align-items-center">
+        <div class="card contactCard col-md-11 mb-4">
           <img
             src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/dRdCZgSnvEcP7OViwEMqJxEXcqmMKXbuIPYtNLjGEhNGEguynitBirVTn9jH2AHmjMcY38piL1PBLQx4TXvzQjP9L3rveFCPlYb9HlrFxzyfVEAhg4XA20IBleHJbEiY.jpg"
             class="card-img-top"
@@ -67,7 +67,7 @@
             </p>
           </div>
         </div>
-        <div class="map col-lg-5 col-md-11">
+        <div class="map col-md-11">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10224.782391184755!2d121.56124558990469!3d25.033854073012375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6e9d93249%3A0xd508f7b3aa02d931!2z5Y-w5YyXMTAx6KeA5pmv5Y-w!5e0!3m2!1szh-TW!2stw!4v1598883167334!5m2!1szh-TW!2stw"
             frameborder="0"
@@ -80,8 +80,8 @@
         </div>
       </div>
       <!-- 2 -->
-      <div class="location mb-6 row px-2">
-        <div class="card contactCard col-lg-5 col-md-11">
+      <div class="mb-6 row px-2 d-flex flex-column align-items-center">
+        <div class="card contactCard col-md-11 mb-4">
           <img
             src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/vpElXHYZGipTOMSMJtbNsxQ2TAoBwZM1dDJldNRjZgWboGsAh9rdJtuE9ExdTs2L1Vg0bK9bKtSIIHyiOMp8Vl3izUYAozZhvbMZmbKddy4abODY5aILpqJTba9MVPVr.jpg"
             class="card-img-top"
@@ -105,7 +105,7 @@
             </p>
           </div>
         </div>
-        <div class="map col-lg-5 col-md-11">
+        <div class="map col-md-11">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21195.99530920897!2d120.67218275209481!3d24.161581020599552!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9cc02858c3%3A0x317a8c5860c7e433!2z5buj5LiJU09HT-eZvuiyqA!5e0!3m2!1szh-TW!2stw!4v1598885656282!5m2!1szh-TW!2stw"
             frameborder="0"
@@ -118,8 +118,8 @@
         </div>
       </div>
       <!-- 3 -->
-      <div class="location mb-6 row px-2">
-        <div class="card contactCard col-lg-5 col-md-11">
+      <div class="mb-6 row px-2 d-flex flex-column align-items-center">
+        <div class="card contactCard col-md-11 mb-4">
           <img
             src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/XTUCr6fEApmGmfoBQ1LpEu4lyTFnY22ZpwuIrFUXVoqhrGtl1wxaz3aZZX1pLb8ChRj0TUutsZWOoTMKXpVuGNoNnyZdYNlK7KmhpTX7zRwWclpEyjp0rMVOTiuI8Ew7.jpg"
             class="card-img-top"
@@ -143,7 +143,7 @@
             </p>
           </div>
         </div>
-        <div class="map col-lg-5 col-md-11">
+        <div class="map col-md-11">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5515.457055666181!2d120.30839376555356!3d22.68635306952794!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e056ff4d123ad%3A0x3a384dfb665b1a27!2z5paw5YWJ5LiJ6LaK6auY6ZuE5bem54ef5bqX!5e0!3m2!1szh-TW!2stw!4v1598885890857!5m2!1szh-TW!2stw"
             frameborder="0"
