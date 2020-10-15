@@ -18,7 +18,7 @@
       <!-- lastestNews -->
       <div class="lastestNews mb-6">
         <div class="row">
-          <div class="col-md-4 mb-sm-3">
+          <div class="col-md-4 mb-3">
             <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/QqHyorydvRCZZ5kqKcsNcjTPtXPtsZCBJxPxnlYrFXvPlMXoYHOFgppJZIlMm3xNxBoLjxcwmOvhgq0ZvP0L8IcniLtP9SjUPjk4TpwIdHdozCOH4x3xT4tTwYMA8D1H.jpg" alt="七月份限時優惠" class="mb-3 newsImg" />
             <h4 class="mb-2 font-weight-bold text-danger">七月份限時優惠</h4>
             <p class="mb-3 text-secondary">2020/07/01</p>

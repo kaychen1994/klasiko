@@ -51,9 +51,6 @@
           </ul>
         </div>
       </div>
-      <!-- <router-link class="cart text-decoration-none mr-sm-2" to="/cart">
-        <span class="material-icons fz-2r text-main">shopping_cart</span>
-      </router-link> -->
     </nav>
   </div>
 </template>

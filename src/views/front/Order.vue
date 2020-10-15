@@ -36,20 +36,24 @@
         </ul>
       </div>
       <!-- process -->
-      <ul class="d-flex justify-content-center mb-7">
-        <li class="process mr-8">
-          <span class="material-icons mb-1">shopping_cart</span>
-          <span>1.確認購物車</span>
-        </li>
-        <li class="process processActive mr-8">
-          <span class="material-icons mb-1">wysiwyg</span>
-          <span>2.確認訂單</span>
-        </li>
-        <li class="process">
-          <span class="material-icons mb-1">local_atm</span>
-          <span>3.結帳</span>
-        </li>
-      </ul>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="d-flex justify-content-around px-6 mb-7">
+            <li class="process">
+              <span class="material-icons mb-1">shopping_cart</span>
+              <span>1.確認購物車</span>
+            </li>
+            <li class="process processActive">
+              <span class="material-icons mb-1">wysiwyg</span>
+              <span>2.確認訂單</span>
+            </li>
+             <li class="process">
+                <span class="material-icons mb-1">local_atm</span>
+                <span>3.結帳</span>
+              </li>
+            </ul>
+        </div>
+      </div>
       <!-- cart list -->
       <div class="row d-flex justify-content-around mb-6">
         <div class="col-md-5">

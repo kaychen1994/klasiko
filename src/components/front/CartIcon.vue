@@ -1,12 +1,16 @@
 <template>
 <!-- 還沒做完 -->
+<div>
+  <router-link to="/cart" class="px-2 py-4">
   <div class="cart py-3">
-    <span class="material-icons text-light py-1" aria-hidden="true">shopping_cart</span>
+    <span class="material-icons text-light py-1">shopping_cart</span>
     <span
       class="badge badge-danger cartBadge"
       style="transform: translateX(-3px) translateY(-5px)"
     >{{ cartTotal }}</span>
   </div>
+  </router-link>
+</div>
 </template>
 
 <script>

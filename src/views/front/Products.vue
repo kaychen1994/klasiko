@@ -14,7 +14,7 @@
     <div class="topCover products-bg bg-img d-flex">
       <h3 class="coverTitle">PRODUCTS</h3>
     </div>
-    <div class="container-fluid px-md-6">
+    <div class="container-fluid px-lg-6">
       <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
@@ -31,8 +31,8 @@
       <h2 class="h2Title">KLÁSIKO 全系列</h2>
 
       <!-- all products -->
-      <div class="row">
-        <div class="col-md-3 mb-2">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-2 col-md-3 mb-2">
           <div class="list-group sticky-top">
             <a
               href="#"
@@ -48,9 +48,9 @@
             >{{ item }}</a>
           </div>
         </div>
-        <div class="col-md-9">
-          <div id="prductsCard" class="card-columns row">
-            <div class="card mb-5 col-md-11" v-for="item in filterCategories" :key="item.id">
+        <div class="col-lg-10 col-md-9">
+          <div id="prductsCard" class="row">
+            <div class="card mb-5 col-lg-4" v-for="item in filterCategories" :key="item.id">
               <router-link :to="`/product/${ item.id }`">
                 <img class="card-img-top product-img" :style="{ backgroundImage: `url(${item.imageUrl[0]})` }"/>
               </router-link>
@@ -62,8 +62,8 @@
                   <span class="text-red font-weight-bold ml-4">{{item.price | money}} 元</span>
                 </div>
               </div>
-              <div class="card-footer bg-transparent d-flex justify-content-around p-3">
-                <button type="button" class="btn btn-dark px-3 d-flex" :disabled="status.loadingItem === item.id">
+              <div class="card-footer bg-transparent d-flex justify-content-around flex-sm-wrap p-3">
+                <button type="button" class="btn btn-dark px-3 mb-sm-3 d-flex" :disabled="status.loadingItem === item.id">
                   <router-link :to="`/product/${ item.id }`" class="text-light text-decoration-none">點擊查看商品</router-link>
                   <i
                       v-if="status.loadingItem === item.id"
@@ -72,7 +72,7 @@
                 </button>
                 <button
                   type="button"
-                  class="btn btn-main px-3 d-flex"
+                  class="btn btn-main px-3 mb-sm-3 d-flex"
                   :disabled="status.loadingItem === item.id"
                   @click.prevent="goToCart(item.id)"
                 >
@@ -190,9 +190,6 @@ export default {
   height: 300px;
   background-size: cover;
   background-position: center;
-}
-.text-red {
-  color: red;
 }
 .lineThrough {
   text-decoration: line-through;

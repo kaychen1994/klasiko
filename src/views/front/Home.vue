@@ -84,7 +84,7 @@
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://i.imgur.com/7MHMaKA.jpg" class="card-img-top cardImg" alt="電子錶" />
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/KRGUW6FkEdUZbbHwiGFTYtXUkiul7MYtif6FhBNlL3LRGyoFHUWLJH8uevBu1HbufAvEAcRiPKllc5n0yksIDlpW8M4DNEuHuoCQ8tXHjYGR2Jddolt4YF0SGnuJGhFz.jpg" class="card-img-top cardImg" alt="電子錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">電子錶</h3>
@@ -194,7 +194,7 @@ export default {
   }
 }
 .cardImg {
-  min-height: 190px;
+  // min-height: 190px;
   &:hover {
     opacity: 0.8;
     cursor: pointer;

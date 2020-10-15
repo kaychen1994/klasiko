@@ -2,9 +2,7 @@
   <div>
     <Nav />
     <router-view></router-view>
-    <router-link to="/cart" class="px-2 py-4">
       <CartIcon />
-    </router-link>
     <Footer />
   </div>
 </template>
