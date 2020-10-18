@@ -33,7 +33,7 @@
       <!-- all products -->
       <div class="row d-flex justify-content-center">
         <div class="col-lg-2 col-md-3 mb-2">
-          <div class="list-group sticky-top">
+          <div class="list-group sticky-top productFilter">
             <a
               href="#"
               class="list-group-item list-group-item-action list-group-item-secondary active"
@@ -198,5 +198,8 @@ export default {
   background-color: #495057;
   border: 1px solid #000000;
   color: black;
+}
+.productFilter {
+  z-index: 0;
 }
 </style>

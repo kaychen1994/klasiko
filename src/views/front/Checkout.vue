@@ -95,12 +95,12 @@
               <div class="d-flex align-items-end" v-if="order.paid === false">
                 <button class="btn btn-danger px-5" @click.prevent="payOrder">確認付款</button>
               </div>
-            </div>
-            <div class="d-flex justify-content-end align-items-end flex-column" v-if="order.paid === true">
-              <span class="text-danger mb-3">※您已付款成功，將於 3~5 個工作日收到訂購商品</span>
-              <router-link to="/">
-                <button type="button" class="btn btn-outline-secondary">返回首頁</button>
-              </router-link>
+              <div class="" v-if="order.paid === true">
+                <p class="text-danger mb-3">※您已付款成功，將於 3~5 個工作日收到訂購商品</p>
+                <router-link to="/">
+                  <button type="button" class="btn btn-outline-secondary">返回首頁</button>
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
