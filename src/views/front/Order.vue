@@ -36,7 +36,7 @@
         </ul>
       </div>
       <!-- process -->
-      <div class="row">
+      <div class="row step">
         <div class="col-md-12">
           <ul class="d-flex justify-content-around px-6 mb-7">
             <li class="process">
@@ -55,12 +55,12 @@
         </div>
       </div>
       <!-- cart list -->
-      <div class="row d-flex justify-content-around mb-6">
+      <div class="row d-flex justify-content-center mb-6">
         <div class="col-md-5">
           <table class="table table-hover mb-5">
             <thead class="thead-light">
               <tr>
-                <th scope="col">#</th>
+                <!-- <th scope="col">#</th> -->
                 <th scope="col">商品圖</th>
                 <th scope="col">產品名稱</th>
                 <th scope="col">數量</th>
@@ -69,9 +69,9 @@
             </thead>
             <tbody>
               <tr v-for="item in carts" :key="item.product.id + 1">
-                <td>
+                <!-- <td>
                   <span class="material-icons text-success">done_outline</span>
-                </td>
+                </td> -->
                 <td>
                   <router-link :to="`/product/${ item.product.id }`">
                     <img :src="item.product.imageUrl[0]" class="cartImg" />
@@ -88,14 +88,9 @@
             <ul v-if="coupon.enabled" class="list-unstyled text-right">
               <li>商品總額： {{ cartTotal | money}}</li>
               <li class="mb-3">優惠折扣：- {{ cartTotal * [ 1- (coupon.percent / 100)] | money }}</li>
-              <li class="fz-32 text-danger">總計：{{ cartTotal * (coupon.percent / 100) | money}}</li>
+              <li class="amount text-danger">總計：{{ cartTotal * (coupon.percent / 100) | money}}</li>
             </ul>
-            <p class="fz-32 text-danger" v-else>總計： {{ cartTotal | money}}</p>
-          </div>
-          <div class="d-flex justify-content-between mb-6">
-            <router-link to="/cart" class="text-dark text-decoration-none">
-              <button type="button" class="btn btn-outline-secondary px-6">返回購物車</button>
-            </router-link>
+            <p class="text-danger amount" v-else>總計： {{ cartTotal | money}}</p>
           </div>
         </div>
         <div class="col-md-5" id="ValidationProvider">

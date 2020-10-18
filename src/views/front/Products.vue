@@ -51,20 +51,20 @@
         <div class="col-lg-10 col-md-9">
           <div id="prductsCard" class="row">
             <div class="card mb-5 col-lg-4" v-for="item in filterCategories" :key="item.id">
-              <router-link :to="`/product/${ item.id }`">
-                <img class="card-img-top product-img" :style="{ backgroundImage: `url(${item.imageUrl[0]})` }"/>
-              </router-link>
               <div class="card-body">
-                <h3 class="card-title text-main font-weight-bold p-3">{{item.title}}</h3>
-                <p class="card-text p-3">{{item.content}}</p>
-                <div class="card-text d-flex justify-content-center align-items-center mb-3">
+                <router-link :to="`/product/${ item.id }`">
+                  <img class="card-img-top product-img mb-4" :style="{ backgroundImage: `url(${item.imageUrl[0]})` }"/>
+                </router-link>
+                <h3 class="card-title text-main font-weight-bold mb-4">{{item.title}}</h3>
+                <p class="card-text text-left mb-4">{{item.content}}</p>
+                <div class="card-text d-flex justify-content-center align-items-center">
                   <span class="lineThrough text-secondary">{{item.origin_price | money}} 元</span>
                   <span class="text-red font-weight-bold ml-4">{{item.price | money}} 元</span>
                 </div>
               </div>
-              <div class="card-footer bg-transparent d-flex justify-content-around flex-sm-wrap p-3">
+              <div class="card-footer bg-transparent d-flex justify-content-between flex-sm-wrap">
                 <button type="button" class="btn btn-dark px-3 mb-sm-3 d-flex" :disabled="status.loadingItem === item.id">
-                  <router-link :to="`/product/${ item.id }`" class="text-light text-decoration-none">點擊查看商品</router-link>
+                  <router-link :to="`/product/${ item.id }`" class="text-light text-decoration-none">查看商品</router-link>
                   <i
                       v-if="status.loadingItem === item.id"
                       class="spinner-grow spinner-grow-sm"
@@ -187,7 +187,7 @@ export default {
   background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/c4f6aWCgCb64rP78r6H4WcwpVIBCnF3XvIPUx7thXYPYVftNOIXdO7cGEEAhYcc2FmVCHaVNYjAFu47oficMfkIB5Sf6rmVD2ltaXmvGkjw53UhsKuTuKo91OGeN3I9n.jpg');
 }
 .product-img {
-  height: 300px;
+  min-height: 300px;
   background-size: cover;
   background-position: center;
 }

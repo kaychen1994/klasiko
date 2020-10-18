@@ -29,7 +29,7 @@
       <div class="row d-flex justify-content-center" v-if="carts.length > 0">
         <div class="col-md-7">
           <!-- process -->
-          <ul class="d-flex justify-content-around mb-7">
+          <ul class="step d-flex justify-content-around mb-7 mb-sm-0">
             <li class="process processActive">
               <span class="material-icons mb-1">
                 shopping_cart
@@ -53,10 +53,10 @@
             <thead class="thead-light">
               <tr>
                 <th scope="col" @click.prevent="delProduct()">刪除</th>
-                <th scope="col">商品圖</th>
+                <!-- <th scope="col">商品圖</th> -->
                 <th scope="col">產品名稱</th>
                 <th scope="col">數量</th>
-                <th scope="col">價格</th>
+                <th scope="col" class="text-right">價格</th>
               </tr>
             </thead>
             <tbody>
@@ -73,28 +73,28 @@
                     <i v-if="status.loadingItem === item.id" class="spinner-grow spinner-grow-sm"></i>
                   </button>
                 </td>
-                <td>
+                <!-- <td>
                   <router-link :to="`/product/${ item.product.id }`">
                     <img :src="item.product.imageUrl[0]" class="cartImg"/>
                   </router-link>
-                </td>
+                </td> -->
                 <td>{{item.product.title}}</td>
                 <td>{{item.quantity}}</td>
-                <td>{{item.product.price | money }}</td>
+                <td class="text-right">{{item.product.price | money }}</td>
               </tr>
             </tbody>
           </table>
           <hr class="cartHr mb-2">
-          <div class="d-flex justify-content-end text-danger font-weight-bold mb-3">
-            <p class="fz-32">商品總額： {{ cartTotal | money}}</p>
+          <div class="text-danger font-weight-bold mb-3">
+            <p class="amount">商品總額： {{ cartTotal | money}}</p>
           </div>
-          <div class="d-flex justify-content-between mb-6">
-            <router-link to="/products" class="text-dark text-decoration-none">
+          <div class="d-flex justify-content-between flex-sm-wrap mb-6 row">
+            <router-link to="/products" class="text-dark text-decoration-none col-md-10 col-lg-3 mb-3">
               <button type="button" class="btn btn-outline-secondary px-6">
                 繼續購物
               </button>
             </router-link>
-            <router-link to="/Order" class="text-light text-decoration-none">
+            <router-link to="/Order" class="text-light text-decoration-none col-md-10 col-lg-3">
               <button type="button" class="btn btn-main px-6">
                 前往下一步
               </button>
@@ -203,14 +203,14 @@ export default {
           this.$bus.$emit('in-cart')
           this.getCart()
           Alert.fire({
-            title: '購物車商品已全部刪除',
+            title: '此商品已刪除',
             icon: 'success'
           })
         })
         .catch(() => {
           this.isLoading = false
           Alert.fire({
-            title: '購物車商品刪除失敗',
+            title: '此商品刪除失敗',
             icon: 'warning'
           })
         })
@@ -225,5 +225,16 @@ export default {
 }
 .cartHr {
   border: 2px solid #cbac67;
+}
+.amount {
+  font-size: 32px;
+  text-align: right;
+  margin-bottom: 42px;
+}
+@media (max-width: 768px) {
+  .amount {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 </style>

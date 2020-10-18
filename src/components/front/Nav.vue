@@ -68,7 +68,12 @@ export default {
 </script>
 
 <style lang="scss">
-.navMenu li :hover{
+.nav-link:hover,.nav-link.active{
   border-bottom: 3px solid white;
+}
+@media (max-width: 768px) {
+  .logo {
+    padding: 16px 0;
+  }
 }
 </style>

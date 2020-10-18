@@ -34,7 +34,7 @@
         </ul>
       </div>
       <!-- process -->
-      <div class="row">
+      <div class="row step">
         <div class="col-md-12">
           <ul class="d-flex justify-content-around px-6 mb-7">
             <li class="process">
@@ -54,13 +54,13 @@
       </div>
       <!-- checkout -->
       <div class="d-flex justify-content-center mb-6">
-        <div class="checkout px-5 py-3">
+        <div class="checkout">
           <h3 class="mb-3 text-left">結帳</h3>
           <p class="text-left">若訂單內容無誤，結帳後即可完成訂單。</p>
           <table class="table table-hover mb-5">
             <thead class="thead-light">
               <tr>
-                <th scope="col">商品圖</th>
+                <!-- <th scope="col">商品圖</th> -->
                 <th scope="col">產品名稱</th>
                 <th scope="col">數量</th>
                 <th scope="col">價格</th>
@@ -68,9 +68,9 @@
             </thead>
             <tbody>
               <tr v-for="( product, i ) in order.products" :key="i">
-                <td>
+                <!-- <td>
                   <img :src="product.product.imageUrl[0]" class="cartImg" />
-                </td>
+                </td> -->
                 <td>{{product.product.title}}</td>
                 <td>{{product.quantity}}</td>
                 <td>{{product.product.price | money }}</td>
@@ -92,9 +92,9 @@
                 <span v-if="!order.paid" class="text-danger font-weight-bold">尚未付款</span>
                 <span v-else class="text-success font-weight-bold">付款完成</span>
               </p>
-            </div>
-            <div class="d-flex align-items-end" v-if="order.paid === false">
-              <button class="btn btn-danger px-5" @click.prevent="payOrder">確認付款</button>
+              <div class="d-flex align-items-end" v-if="order.paid === false">
+                <button class="btn btn-danger px-5" @click.prevent="payOrder">確認付款</button>
+              </div>
             </div>
             <div class="d-flex justify-content-end align-items-end flex-column" v-if="order.paid === true">
               <span class="text-danger mb-3">※您已付款成功，將於 3~5 個工作日收到訂購商品</span>
@@ -169,9 +169,15 @@ export default {
 .checkout {
   width: 960px;
   border: 2px solid #cbac67;
+  padding: 48px 16px;
   h3 {
     display: block;
     font-weight: bold;
+  }
+}
+@media (max-width: 375px) {
+  .checkout {
+    width: 320px;
   }
 }
 </style>

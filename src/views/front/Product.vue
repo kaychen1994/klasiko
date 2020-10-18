@@ -30,15 +30,15 @@
         </ul>
       </div>
       <div class="d-flex align-items-center row mb-6">
-        <img class="col-md-6 mr-6" :src="product.imageUrl[0]" />
-        <div class="col-md-5 px-1">
+        <img class="col-md-6 prodcutImg" :src="product.imageUrl[0]" />
+        <div class="col-md-5 px-lg-1 px-sm-3">
           <h2 class="text-left mb-4 text-main font-weight-bold">{{ product.title }}</h2>
           <p class="text-left mb-4">{{ product.content }}</p>
-          <div class="d-flex">
+          <div class="d-flex justify-content-between">
             <p class="mr-6 lineThrough text-secondary">{{product.origin_price | money}} 元</p>
             <p class="font-weight-bold text-danger">{{product.price | money}} 元</p>
           </div>
-          <div class="d-flex">
+          <div class="d-flex justify-content-between">
             <select name="unit" v-model="product.num" class="px-6 py-1 mr-3">
               <option :value="num" v-for="num in 5" :key="num">{{ num }} 隻</option>
             </select>
@@ -155,10 +155,7 @@ export default {
           this.$bus.$emit('in-cart') // bus 傳送 emit 接收 on
           this.isLoading = false
           Alert.fire({
-            title: '您已成功將商品加入購物車',
-            imageUrl: this.product.imageUrl[0],
-            imageWidth: 510,
-            imageHeight: 340,
+            title: '成功將商品加入購物車',
             icon: 'success'
           })
         })
@@ -187,10 +184,19 @@ export default {
 .productTitle {
   font-family: 'Noto Sans TC', sans-serif;
 }
+.prodcutImg {
+  margin-right: 48px;
+}
 .tab-active {
   color: #cbac67;
   &:hover {
     color: red;
+  }
+}
+@media (max-width: 375px) {
+  .prodcutImg {
+    margin-right: 0px;
+    margin-bottom: 32px;
   }
 }
 </style>

@@ -99,11 +99,11 @@
     <!-- subscribe -->
     <Subscribe />
     <!-- hot -->
-    <div class="px-6 mt-6">
-      <h2 class="h2Title">本月熱銷 TOP 10</h2>
+    <h2 class="h2Title mt-md-3 mt-lg-6">本月熱銷 TOP 10</h2>
       <!-- 這邊插入 hot 元件 -->
-      <Hot />
-    </div>
+      <div class="px-3">
+        <Hot />
+      </div>
   </div>
 </template>
 
@@ -165,10 +165,10 @@ export default {
   line-height: 1.5;
 }
 .banner1 {
-  background-image: url('https://i.imgur.com/0SLklnJ.jpg');
+  background-image: url('https://i.imgur.com/0CmohNK.jpg');
 }
 .banner2 {
-  background-image: url('https://i.imgur.com/0CmohNK.jpg');
+  background-image: url('https://i.imgur.com/0SLklnJ.jpg');
 }
 .banner3 {
   background-image: url('https://i.imgur.com/YpgqjHn.jpg');
@@ -218,6 +218,11 @@ export default {
   box-shadow: 3px 5px 1px 0px #dedede;
 }
 @media (max-width: 768px) {
+  .banner {
+    min-height: 40vh;
+    font-size: 30px;
+    background-position: center center;
+  }
   .service {
     ul {
       flex-direction: column;

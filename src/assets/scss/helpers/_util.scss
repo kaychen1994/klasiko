@@ -117,7 +117,11 @@ body {
     .h2Title::before,
     .h2Title::after {
         display: none;
-    } 
+    }
+    .step {
+        max-height: 0;
+        overflow: hidden;
+    }
 }
 @media (max-width: 375px) {
     .h2Title {
@@ -125,5 +129,10 @@ body {
     }
     .topCover h3 {
         font-size: 36px;
+        padding: 32px 16px;
+    }
+    .breadcrumb {
+      overflow: hidden;
+      max-height: 0;
     }
 }

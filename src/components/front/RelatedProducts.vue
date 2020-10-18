@@ -87,6 +87,6 @@ export default {
 
 <style lang="scss">
 .relatedImg {
-  height: 180px;
+  min-height: 180px;
 }
 </style>
