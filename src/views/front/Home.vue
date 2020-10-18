@@ -99,7 +99,7 @@
     <!-- subscribe -->
     <Subscribe />
     <!-- hot -->
-    <h2 class="h2Title mt-md-3 mt-lg-6">本月熱銷 TOP 10</h2>
+    <h2 class="h2Title mt-6">本月熱銷 TOP 10</h2>
       <!-- 這邊插入 hot 元件 -->
       <div class="px-3">
         <Hot />

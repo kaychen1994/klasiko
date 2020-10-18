@@ -56,7 +56,7 @@
       </div>
       <!-- cart list -->
       <div class="row d-flex justify-content-center mb-6">
-        <div class="col-md-5">
+        <div class="col-lg-5 col-sm-10">
           <table class="table table-hover mb-5">
             <thead class="thead-light">
               <tr>
@@ -93,7 +93,7 @@
             <p class="text-danger amount" v-else>總計： {{ cartTotal | money}}</p>
           </div>
         </div>
-        <div class="col-md-5" id="ValidationProvider">
+        <div class="col-lg-5 col-sm-10" id="ValidationProvider">
           <validation-observer v-slot="{ invalid }">
             <form @submit.prevent="addOrder">
               <div class="form-group">
