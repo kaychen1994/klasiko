@@ -63,7 +63,7 @@
                 </div>
               </div>
               <div class="card-footer bg-transparent d-flex justify-content-between flex-sm-wrap">
-                <button type="button" class="btn btn-dark px-3 mb-sm-3 d-flex" :disabled="status.loadingItem === item.id">
+                <button type="button" class="btn btn-dark detail-button px-3 mb-sm-3 d-flex" :disabled="status.loadingItem === item.id">
                   <router-link :to="`/product/${ item.id }`" class="text-light text-decoration-none">查看商品</router-link>
                   <i
                       v-if="status.loadingItem === item.id"
@@ -193,5 +193,10 @@ export default {
 }
 .lineThrough {
   text-decoration: line-through;
+}
+.detail-button:hover {
+  background-color: #495057;
+  border: 1px solid #000000;
+  color: black;
 }
 </style>

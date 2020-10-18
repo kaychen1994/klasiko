@@ -2,7 +2,7 @@
   <div>
     <swiper :options="swiperOption">
       <swiper-slide class="item mb-5" v-for="item in related" :key="item.id">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <img class="card-img-top relatedImg" :src="item.imageUrl[0]" @click.prevent="getDetail(item.id)" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">{{ item.title }}</h5>
@@ -36,9 +36,20 @@ export default {
           disableOnInteraction: false
         },
         breakpoints: {
-          768: {
+          // 768: {
+          //   slidesPerView: 4,
+          //   spaceBetween: 10
+          // },
+          960: {
             slidesPerView: 4,
-            spaceBetween: 10
+            spaceBetween: 30
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          375: {
+            slidesPerView: 1
           }
         }
       }

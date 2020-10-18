@@ -30,8 +30,8 @@
         </ul>
       </div>
       <div class="d-flex align-items-center row mb-6">
-        <img class="col-md-6 prodcutImg" :src="product.imageUrl[0]" />
-        <div class="col-md-5 px-lg-1 px-sm-3">
+        <img class="col-md-5 col-sm-12 prodcutImg" :src="product.imageUrl[0]" />
+        <div class="col-md-5 col-sm-12 px-lg-1 px-sm-3">
           <h2 class="text-left mb-4 text-main font-weight-bold">{{ product.title }}</h2>
           <p class="text-left mb-4">{{ product.content }}</p>
           <div class="d-flex justify-content-between">
@@ -186,6 +186,7 @@ export default {
 }
 .prodcutImg {
   margin-right: 48px;
+  margin-bottom: 16px;
 }
 .tab-active {
   color: #cbac67;
