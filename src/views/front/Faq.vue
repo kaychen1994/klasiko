@@ -4,7 +4,6 @@
       <h3 class="coverTitle">FAQ</h3>
     </div>
     <div class="container">
-      <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
           <li>
@@ -68,8 +67,6 @@
         </ul>
       </div>
     </div>
-
-    <!-- subscribe -->
     <Subscribe />
   </div>
 </template>
@@ -77,6 +74,7 @@
 <script>
 import $ from 'jquery'
 import Subscribe from '@/components/front/Subscribe.vue'
+
 export default {
   data () {
     return {}
@@ -85,20 +83,11 @@ export default {
     Subscribe
   },
   mounted () {
-    // faq
     $('.answer').hide()
-    // 預設讓第一個 li 加上 active
-    // $('.faqItem').eq(0).addClass('show')
-    // 預設讓第一個 li 內文 顯示
     $('.answer').show()
     $('.faqItem').click(function (e) {
       e.preventDefault()
-      // click 自己的時候顯示自己的 li，關掉其他 li
-      // $(this).toggleClass('show').siblings().removeClass('show')
-      // 讓自己的 li  切換收合
       $(this).children().next().slideToggle()
-      // 讓其他 li  收合
-      // $(this).siblings().children().next().slideUp()
     })
   }
 }

@@ -2,8 +2,8 @@
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -15,7 +15,6 @@
       <h3 class="coverTitle">Cart</h3>
     </div>
     <div class="container-fluid">
-      <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
           <li>
@@ -25,11 +24,9 @@
           <li>購物車</li>
         </ul>
       </div>
-      <!-- cart list -->
       <div class="row d-flex justify-content-center" v-if="carts.length > 0">
         <div class="col-md-7">
-          <!-- process -->
-          <ul class="step d-flex justify-content-around mb-7 mb-sm-0">
+          <ul class="step d-flex justify-content-around mb-md-7 mb-sm-0">
             <li class="process processActive">
               <span class="material-icons mb-1">
                 shopping_cart
@@ -52,11 +49,10 @@
           <table class="table table-hover mb-5">
             <thead class="thead-light">
               <tr>
-                <th scope="col" @click.prevent="delProduct()">刪除</th>
-                <!-- <th scope="col">商品圖</th> -->
-                <th scope="col">產品名稱</th>
-                <th scope="col">數量</th>
-                <th scope="col" class="text-right">價格</th>
+                <th scope="col" width="5%" @click.prevent="delProduct()">刪除</th>
+                <th scope="col" width="25%">產品名稱</th>
+                <th scope="col" width="50%">數量</th>
+                <th scope="col" width="20%" class="text-right">價格</th>
               </tr>
             </thead>
             <tbody>
@@ -73,20 +69,15 @@
                     <i v-if="status.loadingItem === item.id" class="spinner-grow spinner-grow-sm"></i>
                   </button>
                 </td>
-                <!-- <td>
-                  <router-link :to="`/product/${ item.product.id }`">
-                    <img :src="item.product.imageUrl[0]" class="cartImg"/>
-                  </router-link>
-                </td> -->
-                <td>{{item.product.title}}</td>
-                <td>{{item.quantity}}</td>
+                <td>{{ item.product.title }}</td>
+                <td>{{ item.quantity }}</td>
                 <td class="text-right">{{item.product.price | money }}</td>
               </tr>
             </tbody>
           </table>
           <hr class="cartHr mb-2">
           <div class="text-danger font-weight-bold mb-3">
-            <p class="amount">商品總額： {{ cartTotal | money}}</p>
+            <p class="amount">商品總額： {{ cartTotal | money }}</p>
           </div>
           <div class="d-flex justify-content-between flex-sm-wrap mb-6 row">
             <router-link to="/products" class="text-dark text-decoration-none col-md-10 col-lg-3 mb-3">
@@ -119,6 +110,7 @@
 <script>
 import Alert from '@/alert.js'
 import Hot from '@/components/front/Hot.vue'
+
 export default {
   data () {
     return {
@@ -134,7 +126,7 @@ export default {
       },
       isLoading: false,
       status: {
-        loadingItem: '' // 先給預設值才不會出錯
+        loadingItem: ''
       }
     }
   },
@@ -152,16 +144,15 @@ export default {
         .get(url)
         .then((res) => {
           this.carts = res.data.data
-          this.isLoading = false
           this.inCart()
+          this.isLoading = false
         })
         .catch((err) => {
-          this.isLoading = false
-          console.log(err.response.data)
           Alert.fire({
             title: `${err.response.data.errors}`,
             icon: 'warning'
           })
+          this.isLoading = false
         })
     },
     inCart () {
@@ -177,20 +168,20 @@ export default {
       this.$http
         .delete(url)
         .then(() => {
-          this.isLoading = false
           this.$bus.$emit('in-cart')
           this.getCart()
           Alert.fire({
             title: '購物車商品已全部刪除',
             icon: 'success'
           })
+          this.isLoading = false
         })
         .catch(() => {
-          this.isLoading = false
           Alert.fire({
             title: '購物車商品刪除失敗',
             icon: 'warning'
           })
+          this.isLoading = false
         })
     },
     delProduct (id) {
@@ -199,20 +190,20 @@ export default {
       this.$http
         .delete(url)
         .then(() => {
-          this.isLoading = false
           this.$bus.$emit('in-cart')
           this.getCart()
           Alert.fire({
             title: '此商品已刪除',
             icon: 'success'
           })
+          this.isLoading = false
         })
         .catch(() => {
-          this.isLoading = false
           Alert.fire({
             title: '此商品刪除失敗',
             icon: 'warning'
           })
+          this.isLoading = false
         })
     }
   }
@@ -221,7 +212,7 @@ export default {
 
 <style lang="scss">
 .cart-bg {
-  background-image: url('https://i.imgur.com/MiRu5rc.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/urx6c5SBpF9XbZ38ecfOzeJRoBd7Q6s4PSaUqFxfybpD9AqJ6s5f17EOlKA9O8dRzhgEeE8yMLgT2tmAMzMASIFKsYdlYsFkWjLlb0oEZTuT9DQH3TqSvlNZkeaK5dMi.jpg');
 }
 .cartHr {
   border: 2px solid #cbac67;

@@ -82,6 +82,8 @@
 
 <script>
 import $ from 'jquery'
+import Alert from '@/alert.js'
+
 export default {
   data () {
     return {
@@ -110,35 +112,39 @@ export default {
         .get(url)
         .then((res) => {
           this.tempCoupon = res.data.data
-          // 使用 split 切割相關時間戳
           const dedlineAt = this.tempCoupon.deadline.datetime.split(' ')
-          ;[this.due_date, this.due_time] = dedlineAt // 設定日期 eslint standard 前面要加 ; 不然不改過
-          $('#editCoupon').modal('show') // fix 在打開視窗前設定日期就能解決每次編輯優惠券的時間空白問題
+          ;[this.due_date, this.due_time] = dedlineAt
+          $('#editCoupon').modal('show')
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
+          Alert.fire({
+            title: '操作失敗',
+            icon: 'error'
+          })
         })
     },
     updateCoupon () {
       let url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/admin/ec/coupon`
-      let httpMethod = 'post' // 新增
+      let httpMethod = 'post'
       this.isLoading = true
       if (!this.isNew) {
         url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/admin/ec/coupon/${this.tempCoupon.id}`
-        httpMethod = 'patch' // 編輯
+        httpMethod = 'patch'
       }
-      // 日期格式 Y-m-d H:i:s，例如：「2020-06-16 09:31:18」
       this.tempCoupon.deadline_at = `${this.due_date} ${this.due_time}`
       this.$http[httpMethod](url, this.tempCoupon)
         .then((res) => {
-          this.isLoading = false
           this.$emit('update')
           $('#editCoupon').modal('hide')
           this.getCoupons()
-        })
-        .catch((err) => {
           this.isLoading = false
-          console.log(err.response.data)
+        })
+        .catch(() => {
+          Alert.fire({
+            title: '操作失敗',
+            icon: 'error'
+          })
+          this.isLoading = false
         })
     }
   }

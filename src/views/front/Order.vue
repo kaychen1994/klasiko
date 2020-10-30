@@ -2,8 +2,8 @@
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -21,7 +21,6 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
           <li>
@@ -35,7 +34,6 @@
           <li>確認訂單</li>
         </ul>
       </div>
-      <!-- process -->
       <div class="row step">
         <div class="col-md-12">
           <ul class="d-flex justify-content-around px-6 mb-7">
@@ -54,13 +52,11 @@
             </ul>
         </div>
       </div>
-      <!-- cart list -->
       <div class="row d-flex justify-content-center mb-6">
         <div class="col-lg-5 col-sm-10">
           <table class="table table-hover mb-5">
             <thead class="thead-light">
               <tr>
-                <!-- <th scope="col">#</th> -->
                 <th scope="col">商品圖</th>
                 <th scope="col">產品名稱</th>
                 <th scope="col">數量</th>
@@ -69,28 +65,25 @@
             </thead>
             <tbody>
               <tr v-for="item in carts" :key="item.product.id + 1">
-                <!-- <td>
-                  <span class="material-icons text-success">done_outline</span>
-                </td> -->
                 <td>
                   <router-link :to="`/product/${ item.product.id }`">
                     <img :src="item.product.imageUrl[0]" class="cartImg" />
                   </router-link>
                 </td>
-                <td>{{item.product.title}}</td>
-                <td>{{item.quantity}}</td>
-                <td>{{item.product.price | money }}</td>
+                <td>{{ item.product.title }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.product.price | money }}</td>
               </tr>
             </tbody>
           </table>
           <hr class="cartHr mb-2" />
           <div class="d-flex justify-content-end font-weight-bold mb-3">
             <ul v-if="coupon.enabled" class="list-unstyled text-right">
-              <li>商品總額： {{ cartTotal | money}}</li>
+              <li>商品總額： {{ cartTotal | money }}</li>
               <li class="mb-3">優惠折扣：- {{ cartTotal * [ 1- (coupon.percent / 100)] | money }}</li>
-              <li class="amount text-danger">總計：{{ cartTotal * (coupon.percent / 100) | money}}</li>
+              <li class="amount text-danger">總計：{{ cartTotal * (coupon.percent / 100) | money }}</li>
             </ul>
-            <p class="text-danger amount" v-else>總計： {{ cartTotal | money}}</p>
+            <p class="text-danger amount" v-else>總計： {{ cartTotal | money }}</p>
           </div>
         </div>
         <div class="col-lg-5 col-sm-10" id="ValidationProvider">
@@ -177,6 +170,7 @@
 
 <script>
 import Alert from '@/alert.js'
+
 export default {
   data () {
     return {
@@ -192,7 +186,7 @@ export default {
       },
       isLoading: false,
       status: {
-        loadingItem: '' // 先給預設值才不會出錯
+        loadingItem: ''
       },
       coupon: {},
       coupon_code: ''
@@ -205,20 +199,18 @@ export default {
     getCart () {
       this.isLoading = true
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/shopping`
-      this.$http
-        .get(url)
+      this.$http.get(url)
         .then((res) => {
           this.carts = res.data.data
-          this.isLoading = false
           this.inCart()
+          this.isLoading = false
         })
         .catch((err) => {
-          this.isLoading = false
-          console.log(err.response.data)
           Alert.fire({
             title: `${err.response.data.errors}`,
             icon: 'warning'
           })
+          this.isLoading = false
         })
     },
     inCart () {
@@ -240,16 +232,14 @@ export default {
           this.getCart()
           this.$router.push(`/checkout/${res.data.data.id}`)
           this.isLoading = false
-          console.log(order)
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
           this.isLoading = false
         })
     },
     addCouponCode () {
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/coupon/search`
-      this.isLoading = false
+      this.isLoading = true
       this.$http.post(url, { code: this.coupon_code })
         .then((res) => {
           this.getCart()
@@ -258,9 +248,9 @@ export default {
             title: '優惠券已啟用',
             icon: 'success'
           })
+          this.isLoading = false
         })
         .catch((err) => {
-          this.isLoading = false
           const errorData = err.response.data.errors
           if (errorData) {
             errorData.code.forEach((errmsg) => {
@@ -276,6 +266,7 @@ export default {
               icon: 'error'
             })
           }
+          this.isLoading = false
         })
     }
   }
@@ -284,7 +275,7 @@ export default {
 
 <style lang="scss">
 .order-bg {
-  background-image: url('https://i.imgur.com/qwgr12f.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/kOBjzxz5hPhtwbeqgCw063DxnAP2Ol1IbRxBj5EdMnH2IyYI8ztx2uWEgrzzPBPfVYd5soiPwIXsEerEhfQ0JTcRoAOeEtCwbXlLZpbIgdLh4F8knpUSGwNIhnUdMJmQ.jpg');
 }
 .label {
   text-align: left !important;

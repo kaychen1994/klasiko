@@ -28,6 +28,8 @@
 
 <script>
 import $ from 'jquery'
+import Alert from '@/alert.js'
+
 export default {
   data () {
     return {}
@@ -43,12 +45,14 @@ export default {
       const delUrl = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/admin/ec/product/${this.tempProduct.id}`
       this.$http.delete(delUrl, this.tempProduct)
         .then((res) => {
-          console.log(res)
           $('#delProductModal').modal('hide')
           this.$emit('update')
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
+          Alert.fire({
+            title: '操作失敗',
+            icon: 'error'
+          })
         })
     }
   }

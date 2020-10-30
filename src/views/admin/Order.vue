@@ -2,8 +2,8 @@
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -11,7 +11,6 @@
         </div>
       </template>
     </loading>
-    <!-- order list -->
     <table class="table table-hover my-6">
       <thead class="thead-dark">
         <tr>
@@ -53,13 +52,14 @@
         </tr>
       </tbody>
     </table>
-    <!-- pagination 前內後外-->
     <pagination :pages="pagination" @update="getOrders"></pagination>
   </div>
 </template>
 
 <script>
 import Pagination from '@/components/admin/Pagination.vue'
+import Alert from '@/alert.js'
+
 export default {
   name: 'Orders',
   components: {
@@ -85,14 +85,16 @@ export default {
       this.$http
         .get(url)
         .then((res) => {
-          this.isLoading = false
           this.orders = res.data.data
-          console.log(this.orders)
           this.pagination = res.data.meta.pagination
-        })
-        .catch((err) => {
           this.isLoading = false
-          console.log(err.response)
+        })
+        .catch(() => {
+          Alert.fire({
+            title: '資料取得失敗',
+            icon: 'error'
+          })
+          this.isLoading = false
         })
     }
   },
@@ -103,10 +105,16 @@ export default {
     }
     this.$http.patch(url, item.id)
       .then(() => {
-        console.log('付款狀態已修改')
+        Alert.fire({
+          title: '付款狀態已修改',
+          icon: 'success'
+        })
       })
-      .catch((err) => {
-        console.log(err.response)
+      .catch(() => {
+        Alert.fire({
+          title: '資料取得失敗',
+          icon: 'error'
+        })
       })
   }
 }

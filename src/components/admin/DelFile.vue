@@ -2,8 +2,8 @@
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -66,6 +66,7 @@
 <script>
 import $ from 'jquery'
 import Alert from '@/alert.js'
+
 export default {
   data () {
     return {

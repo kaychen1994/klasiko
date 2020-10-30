@@ -2,8 +2,8 @@
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -15,7 +15,6 @@
       <h3 class="coverTitle productTitle">{{ product.title }}</h3>
     </div>
     <div class="container">
-      <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
           <li>
@@ -35,8 +34,8 @@
           <h2 class="text-left mb-4 text-main font-weight-bold">{{ product.title }}</h2>
           <p class="text-left mb-4">{{ product.content }}</p>
           <div class="d-flex justify-content-between">
-            <p class="mr-6 lineThrough text-secondary">{{product.origin_price | money}} 元</p>
-            <p class="font-weight-bold text-danger">{{product.price | money}} 元</p>
+            <p class="mr-6 lineThrough text-secondary">{{ product.origin_price | money }} 元</p>
+            <p class="font-weight-bold text-danger">{{ product.price | money }} 元</p>
           </div>
           <div class="d-flex justify-content-between">
             <select name="unit" v-model="product.num" class="px-6 py-1 mr-3">
@@ -135,36 +134,33 @@ export default {
           }
           this.isLoading = false
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
           this.isLoading = false
         })
     },
     goToCart (id, quantity = 1) {
-      // 數量預設值 1
       this.isLoading = true
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/shopping`
       const cart = {
-        // api required
-        product: id, // id 透過參數傳入
+        product: id,
         quantity: quantity
       }
       this.$http
         .post(url, cart)
         .then((res) => {
-          this.$bus.$emit('in-cart') // bus 傳送 emit 接收 on
-          this.isLoading = false
+          this.$bus.$emit('in-cart')
           Alert.fire({
             title: '成功將商品加入購物車',
             icon: 'success'
           })
+          this.isLoading = false
         })
         .catch((err) => {
-          this.isLoading = false
           Alert.fire({
             title: `${err.response.data.errors}`,
             icon: 'warning'
           })
+          this.isLoading = false
         })
     }
   },
@@ -179,7 +175,7 @@ export default {
 
 <style lang="scss">
 .product-bg {
-  background-image: url('https://i.imgur.com/GAeJjml.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/jAHnfNRtf1IFBCyVxhGXD92miOHmxbNbZM99cPXM9lP0UiZrl4FOj30nDfyJYU8xmFWONvAakakrypmS0bC8gl1v6Dxqh9N6yn2Fz3ckb4J60TqczgP9firceDLtc8ZF.jpg');
 }
 .productTitle {
   font-family: 'Noto Sans TC', sans-serif;

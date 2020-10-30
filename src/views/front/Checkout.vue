@@ -2,8 +2,8 @@
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -15,7 +15,6 @@
       <h3 class="coverTitle">checkout</h3>
     </div>
     <div class="container-fluid">
-      <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
           <li>
@@ -33,7 +32,6 @@
           <li>結帳</li>
         </ul>
       </div>
-      <!-- process -->
       <div class="row step">
         <div class="col-md-12">
           <ul class="d-flex justify-content-around px-6 mb-7">
@@ -52,7 +50,6 @@
             </ul>
         </div>
       </div>
-      <!-- checkout -->
       <div class="d-flex justify-content-center mb-6">
         <div class="checkout">
           <h3 class="mb-3 text-left">結帳</h3>
@@ -60,7 +57,6 @@
           <table class="table table-hover mb-5">
             <thead class="thead-light">
               <tr>
-                <!-- <th scope="col">商品圖</th> -->
                 <th scope="col">產品名稱</th>
                 <th scope="col">數量</th>
                 <th scope="col">價格</th>
@@ -68,12 +64,9 @@
             </thead>
             <tbody>
               <tr v-for="( product, i ) in order.products" :key="i">
-                <!-- <td>
-                  <img :src="product.product.imageUrl[0]" class="cartImg" />
-                </td> -->
-                <td>{{product.product.title}}</td>
-                <td>{{product.quantity}}</td>
-                <td>{{product.product.price | money }}</td>
+                <td>{{ product.product.title }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.product.price | money }}</td>
               </tr>
             </tbody>
           </table>
@@ -86,7 +79,7 @@
               <p>收貨人地址：{{ order.user.address }}</p>
               <p>收貨人電話：{{ order.user.tel }}</p>
               <p>付款方式：{{ order.payment }}</p>
-              <p class="text-danger">付款金額：{{ order.amount | money}}</p>
+              <p class="text-danger">付款金額：{{ order.amount | money }}</p>
               <p>
                 付款狀態：
                 <span v-if="!order.paid" class="text-danger font-weight-bold">尚未付款</span>
@@ -111,6 +104,7 @@
 
 <script>
 import Alert from '@/alert.js'
+
 export default {
   data () {
     return {
@@ -135,8 +129,11 @@ export default {
           this.order = res.data.data
           this.isLoading = false
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
+          Alert.fire({
+            title: '資料取得失敗',
+            icon: 'error'
+          })
           this.isLoading = false
         })
     },
@@ -153,8 +150,11 @@ export default {
           })
           this.isLoading = false
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
+          Alert.fire({
+            title: '資料取得失敗',
+            icon: 'error'
+          })
           this.isLoading = false
         })
     }
@@ -164,7 +164,7 @@ export default {
 
 <style lang="scss">
 .checkout-bg {
-  background-image: url('https://i.imgur.com/O1gGewC.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/ODIeThseN4nbEOJrKZxCrMbSdr6W6E34hJjh94pr1vPJYM4KmL45qvN8RpRisCyPRLEedo146hTapl6kGA1T6DhOBe6gHaUoMw4muZlIbwuh6mIEq1cAyLWnF0FoS4PB.jpg');
 }
 .checkout {
   width: 960px;

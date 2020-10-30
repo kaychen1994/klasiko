@@ -113,6 +113,8 @@
 
 <script>
 import $ from 'jquery'
+import Alert from '@/alert.js'
+
 export default {
   data () {
     return {
@@ -126,7 +128,6 @@ export default {
       type: Boolean,
       required: true
     }
-    // status
   },
   methods: {
     editDetails (id) {
@@ -134,19 +135,19 @@ export default {
       this.$http
         .get(url)
         .then((res) => {
-          console.log(res)
           this.tempProduct = res.data.data
           $('#productModal').modal('show')
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
+          Alert.fire({
+            title: '操作失敗',
+            icon: 'error'
+          })
         })
     },
     updateProduct () {
-      // 新增
       let url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/admin/ec/product`
       let httpMethod = 'post'
-      // 編輯 如果不是新增就改用 patch 編輯
       if (!this.isNew) {
         url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/admin/ec/product/${this.tempProduct.id}`
         httpMethod = 'patch'
@@ -156,8 +157,11 @@ export default {
           this.$emit('update')
           $('#productModal').modal('hide')
         })
-        .catch((err) => {
-          console.log(err.response.data)
+        .catch(() => {
+          Alert.fire({
+            title: '操作失敗',
+            icon: 'error'
+          })
         })
     }
   }

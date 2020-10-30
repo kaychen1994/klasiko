@@ -2,8 +2,8 @@
   <div class="wrap container-fluid">
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -14,7 +14,7 @@
     <div class="row">
       <div class="loginBanner col-md-4">
         <h1 class="mb-5">KLÁSIKO</h1>
-        <img src="https://upload.cc/i1/2020/07/16/AqkJsj.png" alt="klasiko" />
+        <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/HBlLOF7Rve0se3TkBTBIyErmIsL2MPgRRCshr1Kd3sFSobYB1TTvE6rPQfZbTLr6W641MP0uluqZgyLYQhdOKZUG6xIlZQdL0HqPpDfPM8YTaog4BG2LCAxt6mQ5kLPZ.png" alt="klasiko" />
       </div>
       <validation-observer
         v-slot="{ invalid }"
@@ -65,6 +65,8 @@
 </template>
 
 <script>
+import Alert from '@/alert.js'
+
 export default {
   data () {
     return {
@@ -83,23 +85,24 @@ export default {
       this.$http
         .post(api, this.user)
         .then((res) => {
-          this.isLoading = false
           const { token } = res.data
           const { expired } = res.data
           document.cookie = `hexToken=${token}; expires=${new Date(
             expired * 1000
           )}; path=/`
-          this.$router.push('/admin/products') // 登入成功跳到 products
-        })
-        .catch((error) => {
+          this.$router.push('/admin/products')
           this.isLoading = false
-          console.log(error)
+        })
+        .catch(() => {
+          Alert.fire({
+            title: '您輸入的帳號、密碼不符，請重新登入',
+            icon: 'error'
+          })
+          this.isLoading = false
         })
     },
-    // password 輸入後按 enter 也可以 login
     enterKey (e) {
       if (e.keyCode === 13) {
-        // enter 的 keycode 是 13
         this.$router.push('/admin')
       }
     }

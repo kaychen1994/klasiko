@@ -11,6 +11,7 @@
 import Nav from '@/components/front/Nav.vue'
 import Footer from '@/components/front/Footer.vue'
 import CartIcon from '@/components/front/CartIcon.vue'
+
 export default {
   data () {
     return {}

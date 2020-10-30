@@ -18,6 +18,7 @@
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/swiper-bundle.css'
+import Alert from '@/alert.js'
 
 export default {
   data () {
@@ -36,10 +37,6 @@ export default {
           disableOnInteraction: false
         },
         breakpoints: {
-          // 768: {
-          //   slidesPerView: 4,
-          //   spaceBetween: 10
-          // },
           960: {
             slidesPerView: 4,
             spaceBetween: 30
@@ -75,8 +72,11 @@ export default {
         .then((res) => {
           this.products = res.data.data
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
+          Alert.fire({
+            title: '資料取得失敗',
+            icon: 'error'
+          })
         })
     },
     getDetail (id) {

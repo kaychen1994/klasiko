@@ -4,11 +4,6 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  // frontEnd
-  // {
-  //   path: '*',
-  //   redirect: '/'
-  // },
   {
     path: '/',
     component: () => import('../views/Layout.vue'),
@@ -55,13 +50,11 @@ const routes = [
       }
     ]
   },
-  // login
   {
     path: '/login',
     name: 'Login',
     component: () => import('../views/Login.vue')
   },
-  // admin
   {
     path: '/admin',
     name: 'Admin',

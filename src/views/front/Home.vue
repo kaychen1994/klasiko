@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Swiper -->
     <div class="swiper-container homeBanner">
       <div class="swiper-wrapper">
         <div class="swiper-slide banner banner1">
@@ -14,7 +13,6 @@
         </div>
       </div>
     </div>
-    <!-- service -->
     <div class="service py-6 mb-6">
       <h2 class="h2Title">KLÁSIKO 的特色</h2>
       <ul class="d-flex justify-content-around list-unstyled">
@@ -35,14 +33,13 @@
         </li>
       </ul>
     </div>
-    <!-- all series -->
     <div class="container">
       <h2 class="h2Title">KLÁSIKO 全系列</h2>
       <ul class="series row row-cols-1 row-cols-md-4 mb-5 list-unstyled">
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://i.imgur.com/sfUzvwX.jpg" class="card-img-top cardImg" alt="石英錶" />
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/gWUBr5ofRpCAj35XZwjFqPcFyGevajq6xfrwD73ALi0upS2ERRcxboLq5CDA0KdkCkgQlnbgBf6tMAJdygxLaNum5KlQKpagsv52OyNX1SD8j2mhNU9KiTTIaZnegWES.jpg" class="card-img-top cardImg" alt="石英錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">石英錶</h3>
@@ -52,11 +49,10 @@
             </div>
           </div>
         </li>
-        <!-- 2 -->
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://i.imgur.com/h0WumFk.jpg" class="card-img-top cardImg" alt="潛水錶" />
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/Sr1OZFDeHP6Zu1IJC7CEMLYOzhtihEeYTWb56uuCiufcAkM4WODzXV6vHXOIcRn779ndlNTCwkXL5YiGwXG0e8DTGJ6ShEaqWv2bTQedwGTlDEjnHQSayXfTaFIaH6wG.jpg" class="card-img-top cardImg" alt="潛水錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">潛水錶</h3>
@@ -66,11 +62,10 @@
             </div>
           </div>
         </li>
-        <!-- 3 -->
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://i.imgur.com/l0ef0Np.jpg" class="card-img-top cardImg" alt="機械錶" />
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/MjJipn37mpTjUeUhDCv3rVfBZVC17iZfzdXJx27BDk3T6mSXT9OWCgKKO0NTT4OiEDwfeNEcK5GKkEN2bG3ZKAHgNg0dm9Q2PQlBcSXTeP75IaoUZaXvnwqiXhWEKGi6.jpg" class="card-img-top cardImg" alt="機械錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">機械錶</h3>
@@ -80,7 +75,6 @@
             </div>
           </div>
         </li>
-        <!-- 4 -->
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
@@ -96,11 +90,8 @@
         </li>
       </ul>
     </div>
-    <!-- subscribe -->
     <Subscribe />
-    <!-- hot -->
     <h2 class="h2Title mt-6">本月熱銷 TOP 10</h2>
-      <!-- 這邊插入 hot 元件 -->
       <div class="px-3">
         <Hot />
       </div>
@@ -165,13 +156,13 @@ export default {
   line-height: 1.5;
 }
 .banner1 {
-  background-image: url('https://i.imgur.com/0CmohNK.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/T1ZxKOuls12KonXgRHheQa7lUQzKuskzWWfUHSyxlDO4BJvcxOJOYgNzMBrCn68i3B8z9bqIEAvbHa1uCQpBpMezrTnIIKtEkARzQUSpisVdreQpHpx5uqrgnXHw2UWs.jpg');
 }
 .banner2 {
-  background-image: url('https://i.imgur.com/0SLklnJ.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/MCMSvU6EzLKNqmKaa2sUw56ONiLdoYTsaIcv9YQJldx4qJ32trEwdoBleHJ5ZdvuyDAAKqQ2Ja9hSy42Dv1YcDsSH5URESzemczMnuvNbyv2ngOgem0uENpwAH3QVV0K.jpg');
 }
 .banner3 {
-  background-image: url('https://i.imgur.com/YpgqjHn.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/CTouP65ZiIGgjl2kaxQawqA9mqaHjWBUZRM3ER5yxdBPhWMyC4ZKmSsE6zTHXRoDZPyc0DxDzwDlXAw2vRJ2xstYw9ixgBgPYG8GeWnaD8uv808sDYLaY46DMfxsCkeY.jpg');
 }
 .service {
   background: #fafafa;
@@ -194,7 +185,6 @@ export default {
   }
 }
 .cardImg {
-  // min-height: 190px;
   &:hover {
     opacity: 0.8;
     cursor: pointer;

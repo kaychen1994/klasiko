@@ -1,10 +1,5 @@
-// bootstrap
 @import '~bootstrap/scss/functions';
-@import './helpers/variables'; // 複製 variables 來修改
+@import './helpers/variables';
 @import '~bootstrap/scss/bootstrap';
-
-// helpers
 @import './helpers/util';
-
-// 後台
 @import 'loading';

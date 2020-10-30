@@ -2,8 +2,8 @@
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -20,7 +20,6 @@
         @click.prevent="openModal('new')"
       >建立新的優惠券</button>
     </div>
-    <!-- order list -->
     <table class="table table-hover">
       <thead class="thead-dark">
         <tr>
@@ -59,11 +58,8 @@
         </tr>
       </tbody>
     </table>
-    <!-- coupon modal -->
     <edit-coupon ref="editCoupon" :is-new="isNew" @update="getCoupons"></edit-coupon>
-    <!-- del coupon modal -->
     <del-coupon :temp-coupon="tempCoupon" @update="getCoupons"></del-coupon>
-    <!-- pagination 前內後外-->
     <pagination :pages="pagination" @update="getCoupons"></pagination>
   </div>
 </template>
@@ -73,6 +69,8 @@ import $ from 'jquery'
 import EditCoupon from '@/components/admin/EditCoupon.vue'
 import DelCoupon from '@/components/admin/DelCoupon.vue'
 import Pagination from '@/components/admin/Pagination.vue'
+import Alert from '@/alert.js'
+
 export default {
   data () {
     return {
@@ -108,33 +106,32 @@ export default {
           this.pagination = res.data.meta.pagination
           this.isLoading = false
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
+          Alert.fire({
+            title: '資料取得失敗',
+            icon: 'error'
+          })
           this.isLoading = false
         })
     },
     openModal (isNew, item) {
       switch (isNew) {
         case 'new': {
-          // 新增
           this.isNew = true
-          this.$refs.editCoupon.tempCoupon = {} // fix
-          this.$refs.editCoupon.due_date = '' // fix 清空 due_date
-          this.$refs.editCoupon.due_time = '' // fix 清空 due_time
+          this.$refs.editCoupon.tempCoupon = {}
+          this.$refs.editCoupon.due_date = ''
+          this.$refs.editCoupon.due_time = ''
           $('#editCoupon').modal('show')
           break
         }
         case 'edit': {
-          // 編輯
           this.isNew = false
-          this.tempCoupon = Object.assign({}, item) // fix // 淺拷貝
+          this.tempCoupon = Object.assign({}, item)
           this.$refs.editCoupon.editDetails(item.id)
-          // editDetails 要去 editcoupon methods
           break
         }
         case 'delete': {
-          // 刪除
-          this.tempCoupon = Object.assign({}, item) // 淺拷貝
+          this.tempCoupon = Object.assign({}, item)
           $('#delCoupon').modal('show')
           break
         }

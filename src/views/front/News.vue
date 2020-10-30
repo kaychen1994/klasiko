@@ -4,7 +4,6 @@
       <h3 class="coverTitle">NEWS</h3>
     </div>
     <div class="container">
-      <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
           <li>
@@ -15,7 +14,6 @@
         </ul>
       </div>
       <h2 class="h2Title">最新消息</h2>
-      <!-- lastestNews -->
       <div class="lastestNews mb-6">
         <div class="row">
           <div class="col-md-4 mb-3">
@@ -46,7 +44,6 @@
       <h2 class="h2Title mb-2">時尚穿搭</h2>
       <p class="font-italic mb-6">KLÁSIKO 好錶不僅能掌握時間，也能兼顧時尚</p>
       <div class="card-columns mb-6">
-        <!-- 1 -->
         <div class="card">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/mJO2v5Q3pqgtMQGDoh7twErSRQJ7F0ZSVIC0MR1NyvlI9fLzRkMAUi5kBY3K778jDlvmy5pIZQuVDv4xArwW2VtLBojcogiids0NPBXqNEwdoptjCBwHIv4FxVMJKExj.jpg" class="card-img-top" alt="石英錶" />
           <div class="card-body">
@@ -56,7 +53,6 @@
             >棕色皮革搭配白色錶面，簡約錶款配輕鬆穿搭，輕鬆創造休閒感。</p>
           </div>
         </div>
-        <!-- 2 -->
         <div class="card">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/J9ylHUZUw7ZvCRMxL8dxgdFsD1FYllSCa8PWq9Z2r10R54tAd6KgFC9FA8gI0NbmF1ckiaIUN7bZf7Vg5fGaFkAiNqcAC2YqImbE9pLcExzTTYD00jjLNmmC79Pop96S.jpg" class="card-img-top" alt="計時錶" />
           <div class="card-body">
@@ -66,7 +62,6 @@
             >大錶面看起來落落大方，以最簡約的造型襯托時尚，是都會型男必備錶款，任何穿搭都合適。</p>
           </div>
         </div>
-        <!-- 3 -->
         <div class="card">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/XkLKH136YxmiKUC1M3VBZLZztn2ur3TjQecpTjyYG75uPIihZUyZKVa43CPXnkDTV159jSsYk69ImbmhbrTznQLfM4LixHttxghTUM4A2zX7qBNMEYTP2xhZ3JLgyJf2.jpg" class="card-img-top" alt="經典錶" />
           <div class="card-body">
@@ -76,7 +71,6 @@
             >這款錶是由玫瑰金錶圈、白色錶面以及黑色皮革組成，最簡單也最經典，不管過了多久都不會退流行。</p>
           </div>
         </div>
-        <!-- 4 -->
         <div class="card">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/bqO39qGNiM7ybDomS2eXYro1T7VZ64PHB68ixoaiidbjYm50C1AZrvTsTc26Qjaoe8gLbzgRszlqjT070jU94TH67f9oC5L8QAA8iDsBsHY1atWucK0qGA290s7jqyy2.jpg" class="card-img-top" alt="石英錶" />
           <div class="card-body">
@@ -86,7 +80,6 @@
             >錶帶由木頭打造，很適合熱愛大自然的愛錶人士收藏，小巧的錶面看起來更加內斂，很適合搭配休閒穿著。</p>
           </div>
         </div>
-        <!-- 5 -->
         <div class="card">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/9Wxb4cqvLCv5Co7QrTawrqS2NlWtf88O3A7RU5nYQ051XooZKILAC58dmxVuqMejR2Ihd3D2MCGccxnMewyJKOZL0pEWLU10dWoqAaiqXnrXAZXM2RKgZLaaBnCVs93C.jpg" class="card-img-top" alt="潛水錶" />
           <div class="card-body">
@@ -96,7 +89,6 @@
             >陶瓷錶圈搭配黑色錶面，讓潛水錶看起來有型也有質感，因此就算穿西裝也不會感到突兀。</p>
           </div>
         </div>
-        <!-- 6 -->
         <div class="card">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/YkgbobS1pVKFIV0hP73EkAk5mXZOLuOXcrUlGQcmDmIDtmZ1ue8XdyFPxdsoI7dWJRkO4GaFVIk3wtJCOchCOVgbeRQGyKKKNttH6ppUc7KSxlrhcCZYQo9EG1DTYcMl.jpg" class="card-img-top" alt="休閒錶" />
           <div class="card-body">
@@ -106,7 +98,6 @@
             >以玫瑰金的錶圈、米蘭錶帶、指針來襯托白色錶面，非常適合年輕女性配戴，看起來時尚又不失特色。</p>
           </div>
         </div>
-        <!-- 7 -->
         <div class="card">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/JXx1f67CmgQPDOD2vV09p5cWoOiJg6AcxgerPof99k3L4QyMXV3V7VUFZjXazjWBTWPBa3SKyQnceqVqGxHD0OB9hiXcJ841Q3yifUJLdKywgUgaX6BdZC5nGnjfSfvd.jpg" class="card-img-top" alt="計時錶" />
           <div class="card-body">
@@ -116,7 +107,6 @@
             >黃金色的錶帶、錶框加上鐵灰色的錶面，看起來高雅又時尚，搭配素色襯衫非常適合。</p>
           </div>
         </div>
-        <!-- 8 -->
         <div class="card">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/PYCXvMZLcqLDj7NMTkF1xDWrcb9hHqO11fvLjaxVBHNeYqK989oiiHYUaaCyoaxy23BCPX3Q0UHrE305HOXHolkSpqTY7gblMqul06xrpddhXJVce4yQJFGx3AAV0F9s.jpg" class="card-img-top" alt="經典錶" />
           <div class="card-body">
@@ -126,7 +116,6 @@
             >以小巧錶面以及纖細錶帶，讓腕錶看起來更秀氣，黃金配色也更顯得突出。</p>
           </div>
         </div>
-        <!-- 9 -->
         <div class="card">
           <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/zN1BMGLHVfvoWlvUQNDIE3NvtiWsesBWQFAAblD3dHlM2IYFkRZKNsJoNHKNrdwqRuLjYAA1VqlPYmaH9sqIESPxej1xzFN4Yckid0go9DqXH6Uzafxn1aoDksRLbO3y.jpg" class="card-img-top" alt="機械錶" />
           <div class="card-body">
@@ -138,13 +127,13 @@
         </div>
       </div>
     </div>
-    <!-- subscribe -->
     <Subscribe />
   </div>
 </template>
 
 <script>
 import Subscribe from '@/components/front/Subscribe.vue'
+
 export default {
   data () {
     return {}

@@ -3,8 +3,8 @@
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -21,7 +21,6 @@
         @click="openModal('new')"
       >建立新的產品</button>
     </div>
-    <!-- product modal -->
     <div
       id="productModal"
       class="modal fade bd-example-modal-xl"
@@ -32,7 +31,6 @@
     >
       <product-modal ref="productModal" :is-new="isNew" :temp-product="tempProduct" @update="getProducts"></product-modal>
     </div>
-    <!-- delete modal -->
     <div
       id="delProductModal"
       class="modal fade"
@@ -45,7 +43,6 @@
     >
       <del-modal :temp-product="tempProduct" @update="getProducts"></del-modal>
     </div>
-    <!-- product list -->
     <table class="table table-hover">
       <thead class="thead-dark">
         <tr>
@@ -84,7 +81,6 @@
         </tr>
       </tbody>
     </table>
-    <!-- pagination 前內後外-->
     <pagination :pages="pagination" @update="getProducts"></pagination>
   </div>
 </template>
@@ -94,6 +90,8 @@ import $ from 'jquery'
 import DelModal from '@/components/admin/DelModal.vue'
 import ProductModal from '@/components/admin/ProductModal.vue'
 import Pagination from '@/components/admin/Pagination.vue'
+import Alert from '@/alert.js'
+
 export default {
   components: {
     DelModal,
@@ -113,35 +111,33 @@ export default {
     }
   },
   methods: {
-    // 取得產品資料
     getProducts (num = 1) {
       this.isLoading = true
-      // 當 num 為 undefined 的時候代上 1 ，將 num 預設為 1
       const apiUrl = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/admin/ec/products?paged=10&page=${num}`
       this.$http
         .get(apiUrl)
         .then((res) => {
-          this.isLoading = false
-          console.log(res)
           this.products = res.data.data
           this.pagination = res.data.meta.pagination
-
           if (this.tempProduct.id) {
             this.tempProduct = {
               imageUrl: []
             }
-            $('#productModal').modal('hide') // 更新結束後關閉 modal
+            $('#productModal').modal('hide')
           }
+          this.isLoading = false
         })
         .catch((err) => {
+          Alert.fire({
+            title: `${err.response.data.errors}`,
+            icon: 'error'
+          })
           this.isLoading = false
-          console.log(err.response)
         })
     },
     openModal (isNew, item) {
       switch (isNew) {
         case 'new': {
-          // 新增
           this.tempProduct = {
             imageUrl: []
           }
@@ -150,14 +146,12 @@ export default {
           break
         }
         case 'edit': {
-          // 編輯
           this.isNew = false
           this.$refs.productModal.editDetails(item.id)
           break
         }
         case 'delete': {
-          // 刪除
-          this.tempProduct = Object.assign({}, item) // 淺拷貝
+          this.tempProduct = Object.assign({}, item)
           $('#delProductModal').modal('show')
           break
         }
@@ -166,25 +160,21 @@ export default {
         }
       }
     },
-    // 登出，清除 cookie
     logout () {
       document.cookie = 'token=; expires=; path=/'
-      window.location = 'login.html'
+      this.$router.push('login')
     }
   },
   created () {
-    // 帶出 token ， 沒有 token 無法取資料
     this.token = document.cookie.replace(
       /(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/,
       '$1'
     )
-    // 作為預設值，每次發送都會把 token 帶上
     this.$http.defaults.headers.common.Authorization = `Bearer ${this.token}`
-    // 防止直接輸入網址進入，一定要 login
     if (this.token === '') {
-      window.location = 'login.html'
+      this.$router.push('login')
     }
-    this.getProducts() // 先運行 getProducts
+    this.getProducts()
   }
 }
 </script>

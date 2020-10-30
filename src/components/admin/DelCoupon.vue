@@ -38,6 +38,8 @@
 
 <script>
 import $ from 'jquery'
+import Alert from '@/alert.js'
+
 export default {
   data () {
     return {
@@ -53,14 +55,16 @@ export default {
   methods: {
     delCoupon () {
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/admin/ec/coupon/${this.tempCoupon.id}`
-      this.$http
-        .delete(url, this.tempCoupon)
+      this.$http.delete(url, this.tempCoupon)
         .then(() => {
           $('#delCoupon').modal('hide')
           this.$emit('update')
         })
-        .catch((err) => {
-          console.log(err.response)
+        .catch(() => {
+          Alert.fire({
+            title: '優惠券刪除失敗',
+            icon: 'error'
+          })
         })
     }
   }

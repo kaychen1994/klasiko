@@ -2,8 +2,8 @@
   <div class="py-6">
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -56,6 +56,7 @@ import $ from 'jquery'
 import Alert from '@/alert.js'
 import Pagination from '@/components/admin/Pagination.vue'
 import DelFileModal from '@/components/admin/DelFile.vue'
+
 export default {
   components: {
     Pagination,
@@ -88,11 +89,11 @@ export default {
           this.isLoading = false
         })
         .catch(() => {
-          this.isLoading = false
           Alert.fire({
             title: '無法取得資料，稍後再試',
             icon: 'error'
           })
+          this.isLoading = false
         })
     },
     uploadFile () {

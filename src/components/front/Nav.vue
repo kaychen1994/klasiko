@@ -57,10 +57,10 @@
 
 <script>
 import $ from 'jquery'
+
 export default {
   watch: {
     $route () {
-      // 收合選單
       $('#navbarNav').collapse('hide')
     }
   }

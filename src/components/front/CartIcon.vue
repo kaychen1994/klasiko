@@ -1,5 +1,4 @@
 <template>
-<!-- 還沒做完 -->
 <div>
   <router-link to="/cart" class="px-2 py-4">
   <div class="cart py-3">

@@ -4,7 +4,6 @@
       <h3 class="coverTitle">CONTACT US</h3>
     </div>
     <div class="container">
-      <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
           <li>
@@ -14,7 +13,6 @@
           <li>聯絡我們</li>
         </ul>
       </div>
-      <!-- repair -->
       <div class="alert alert-warning alert-dismissible fade show" role="alert">
         凡是購買 KLÁSIKO 全系列錶款，在
         <strong>2 年保固期間</strong>都可以拿到我們服務據點免費維修，超過保固期間也能享有維修折扣。
@@ -41,7 +39,6 @@
         </button>
       </div>
       <h2 class="h2Title">聯絡我們</h2>
-      <!-- location -->
       <div class="mb-6 row px-2 d-flex flex-column align-items-center">
         <div class="card contactCard col-md-11 mb-4">
           <img
@@ -79,7 +76,6 @@
           ></iframe>
         </div>
       </div>
-      <!-- 2 -->
       <div class="mb-6 row px-2 d-flex flex-column align-items-center">
         <div class="card contactCard col-md-11 mb-4">
           <img
@@ -117,7 +113,6 @@
           ></iframe>
         </div>
       </div>
-      <!-- 3 -->
       <div class="mb-6 row px-2 d-flex flex-column align-items-center">
         <div class="card contactCard col-md-11 mb-4">
           <img

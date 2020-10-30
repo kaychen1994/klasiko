@@ -1,142 +1,136 @@
-// setting
-body {
-    font-family: "Noto Sans TC", sans-serif !important;
-}
 .bg-img {
-    background-repeat: no-repeat;
-    background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .logo {
-    padding: 16px 32px;
-    font-family: "Oleo Script", cursive;
-    a {
-        color: #cbac67 !important;
-        font-size: 48px;
-        &:hover {
-            color: #cbac67 !important;
-        }
+  padding: 16px 32px;
+  font-family: "Oleo Script", cursive;
+  a {
+    color: #cbac67 !important;
+    font-size: 48px;
+    &:hover {
+      color: #cbac67 !important;
     }
+  }
 }
 .coverTitle {
-    font-family: "Kaushan Script", cursive;
+  font-family: "Kaushan Script", cursive;
 }
 .h2Title {
-    font-size: 48px;
-    margin-bottom: 64px;
-    display: inline-block;
-    line-height: 48px;
-    position: relative;
-    text-align: center;
-    color: #cbac67;
-    font-weight: bold;
-    &::before {
-        left: -70%;
-    }
-    &::after {
-        right: -70%;
-    }
+  font-size: 48px;
+  margin-bottom: 64px;
+  display: inline-block;
+  line-height: 48px;
+  position: relative;
+  text-align: center;
+  color: #cbac67;
+  font-weight: bold;
+  &::before {
+    left: -70%;
+  }
+  &::after {
+    right: -70%;
+  }
 }
 .h2Title::before,
 .h2Title::after {
-    content: "";
-    height: 3px;
-    background: #cbac67;
-    top: 50%;
-    width: 55%;
-    position: absolute;
+  content: "";
+  height: 3px;
+  background: #cbac67;
+  top: 50%;
+  width: 55%;
+  position: absolute;
 }
 .topCover {
-    width: 100%;
-    font-size: 50px;
-    h3 {
-        padding: 108px 108px;
-        color: white;
-        font-size: 64px;
-    }
+  width: 100%;
+  font-size: 50px;
+  h3 {
+    padding: 108px 108px;
+    color: white;
+    font-size: 64px;
+  }
 }
 .breadcrumb {
-    background: none;
-    ul {
-        li {
-            font-size: 24px;
-        }
+  background: none;
+  ul {
+    li {
+      font-size: 24px;
     }
-    a:hover {
-        color: red;
-    }
+  }
+  a:hover {
+    color: red;
+  }
 }
-
 // font
 .fz-20 {
-    font-size: 20px;
+  font-size: 20px;
 }
 .fz-32 {
-    font-size: 32px;
+  font-size: 32px;
 }
 .fz-36 {
-    font-size: 36px;
+  font-size: 36px;
 }
 // colors
 .text-main {
-    color: #cbac67;
+  color: #cbac67;
 }
 .text-red {
-    color: red;
+  color: red;
 }
 // width
 .w-120 {
-    width: 120px;
+  width: 120px;
 }
-
 // progress
 .process {
-    width: 120px;
-    height: 120px;
-    border: 2px solid #cbac67;
-    border-radius: 99em;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #cbac67;
+  border-radius: 99em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .processActive {
-    color: white;
-    background-color: #cbac67;
+  color: white;
+  background-color: #cbac67;
 }
 .cartImg {
-    width: 100px;
+  width: 100px;
 }
 .btn-main {
-    background-color: #cbac67;
+  background-color: #cbac67;
+  color: white;
+  &:hover {
+    background-color: red;
     color: white;
-    &:hover {
-        background-color: red;
-        color:white;
-    }  
+  }
 }
 @media (max-width: 768px) {
-    .h2Title::before,
-    .h2Title::after {
-        display: none;
-    }
-    .step {
-        max-height: 0;
-        overflow: hidden;
-    }
-    .breadcrumb {
-        overflow: hidden;
-        max-height: 0;
-    }
+  .h2Title::before,
+  .h2Title::after {
+    display: none;
+  }
+  .step {
+    max-height: 0;
+    overflow: hidden;
+  }
+  .breadcrumb {
+    overflow: hidden;
+    max-height: 0;
+  }
 }
 @media (max-width: 375px) {
-    .h2Title {
-        font-size: 36px;
-    }
-    .topCover h3 {
-        font-size: 36px;
-        padding: 32px 16px;
-    }
-    .breadcrumb {
-      overflow: hidden;
-      max-height: 0;
-    }
+  .h2Title {
+    font-size: 36px;
+  }
+  .topCover h3 {
+    font-size: 36px;
+     padding: 32px 16px;
+  }
+  .breadcrumb {
+    overflow: hidden;
+    max-height: 0;
+  }
 }

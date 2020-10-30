@@ -2,8 +2,8 @@
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
-        <div class="loadingio-spinner-eclipse-r1twaurvtum">
-          <div class="ldio-qkw9u78zjtk">
+        <div class="loadingio-spinner-eclipse">
+          <div class="loading-style">
             <div></div>
             <div></div>
             <div></div>
@@ -15,7 +15,6 @@
       <h3 class="coverTitle">PRODUCTS</h3>
     </div>
     <div class="container-fluid px-lg-6">
-      <!-- breadcrumb -->
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
           <li>
@@ -26,11 +25,8 @@
         </ul>
       </div>
       <h2 class="h2Title">本月熱銷 TOP 10</h2>
-      <!-- Swiper -->
       <Hot />
       <h2 class="h2Title">KLÁSIKO 全系列</h2>
-
-      <!-- all products -->
       <div class="row d-flex justify-content-center">
         <div class="col-lg-2 col-md-3 mb-2">
           <div class="list-group sticky-top productFilter">
@@ -55,11 +51,11 @@
                 <router-link :to="`/product/${ item.id }`">
                   <img class="card-img-top product-img mb-4" :style="{ backgroundImage: `url(${item.imageUrl[0]})` }"/>
                 </router-link>
-                <h3 class="card-title text-main font-weight-bold mb-4">{{item.title}}</h3>
-                <p class="card-text text-left mb-4">{{item.content}}</p>
+                <h3 class="card-title text-main font-weight-bold mb-4">{{ item.title }}</h3>
+                <p class="card-text text-left mb-4">{{ item.content }}</p>
                 <div class="card-text d-flex justify-content-center align-items-center">
-                  <span class="lineThrough text-secondary">{{item.origin_price | money}} 元</span>
-                  <span class="text-red font-weight-bold ml-4">{{item.price | money}} 元</span>
+                  <span class="lineThrough text-secondary">{{ item.origin_price | money }} 元</span>
+                  <span class="text-red font-weight-bold ml-4">{{ item.price | money }} 元</span>
                 </div>
               </div>
               <div class="card-footer bg-transparent d-flex justify-content-between flex-sm-wrap">
@@ -88,8 +84,6 @@
               </div>
             </div>
           </div>
-          <!-- pagination 前內後外-->
-          <!-- <pagination :pages="pagination" @update="getProducts" class="mb-6"></pagination> -->
         </div>
       </div>
     </div>
@@ -104,14 +98,13 @@ export default {
   data () {
     return {
       isLoading: false,
-      // pagination: {},
       products: [],
       categories: ['石英錶', '潛水錶', '機械錶', '電子錶'],
       filterCategory: '',
       cart: [],
       cartTotal: 0,
       status: {
-        loadingItem: '' // 先給預設值才不會出錯
+        loadingItem: ''
       }
     }
   },
@@ -128,29 +121,28 @@ export default {
       this.$http
         .get(url)
         .then((res) => {
-          this.isLoading = false
           this.products = res.data.data
           this.pagination = res.data.meta.pagination
           const { categoryName } = this.$route.params
           if (categoryName) {
             this.filterCategory = categoryName
           }
-        })
-        .catch((err) => {
           this.isLoading = false
-          console.log(err.response)
+        })
+        .catch(() => {
+          this.isLoading = false
         })
     },
-    goToCart (id, quantity = 1) { // 數量預設值 1
+    goToCart (id, quantity = 1) {
       this.status.loadingItem = id
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/shopping`
-      const cart = { // api required
-        product: id, // id 透過參數傳入
+      const cart = {
+        product: id,
         quantity: quantity
       }
       this.$http.post(url, cart)
         .then((res) => {
-          this.$bus.$emit('in-cart') // bus 傳送 emit 接收 on
+          this.$bus.$emit('in-cart')
           this.status.loadingItem = ''
           Alert.fire({
             title: '您已成功將商品加入購物車',
