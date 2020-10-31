@@ -29,7 +29,7 @@
       <h2 class="h2Title">KLÁSIKO 全系列</h2>
       <div class="row d-flex justify-content-center">
         <div class="col-lg-2 col-md-3 mb-2">
-          <div class="list-group sticky-top productFilter">
+          <div class="list-group sticky-top productFilter mb-6">
             <a
               href="#"
               class="list-group-item list-group-item-action list-group-item-secondary active"
@@ -115,14 +115,13 @@ export default {
     this.getProducts()
   },
   methods: {
-    getProducts () {
+    getProducts (page = 1, paged = 30) {
       this.isLoading = true
-      const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/products`
+      const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/products?page=${page}&paged=${paged}`
       this.$http
         .get(url)
         .then((res) => {
           this.products = res.data.data
-          this.pagination = res.data.meta.pagination
           const { categoryName } = this.$route.params
           if (categoryName) {
             this.filterCategory = categoryName

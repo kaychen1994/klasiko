@@ -53,3 +53,19 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.page-item.active .page-link {
+  background: #cbac67;
+  color: white;
+  border-color: white;
+}
+.page-link {
+  border: 2px solid #cbac67;
+  color: #495057;
+  margin-left: 0px;
+  &:hover {
+    color: #495057;
+  }
+}
+</style>

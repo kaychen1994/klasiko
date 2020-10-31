@@ -19,6 +19,7 @@
 <style lang="scss">
 .subscribe {
   background: #fafafa;
+  margin-bottom: 0 !important;
   label {
     font-size: 36px;
   }

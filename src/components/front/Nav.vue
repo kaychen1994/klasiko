@@ -17,11 +17,11 @@
       </h1>
       <div class="collapse navbar-collapse" id="navbarNav">
         <div
-          class="navMenu d-flex justify-content-between align-items-center"
+          class="navMenu"
           id="navbarToggleExternalContent"
         >
           <ul
-            class="navbar-nav mr-auto mt-2 mt-lg-0 fz-20 mr-auto d-flex list-unstyled"
+            class="navbar-nav fz-20 mr-auto d-flex list-unstyled"
           >
             <li class="nav-item">
               <router-link class="nav-link text-light" to="/about"
@@ -71,9 +71,26 @@ export default {
 .nav-link:hover,.nav-link.active{
   border-bottom: 3px solid white;
 }
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media (max-width: 768px) {
   .logo {
     padding: 16px 0;
+  }
+  .navMenu {
+    display: inline;
+  }
+  .nav-link:hover,.nav-link.active{
+    background: #cbac67;
+    color: white !important;
+    font-weight: bold !important;
+  }
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 </style>
