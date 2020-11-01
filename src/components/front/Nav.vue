@@ -89,6 +89,9 @@ export default {
     padding-top: 0;
     padding-bottom: 0;
   }
+  .navbar-nav{
+    margin-bottom: 24px;
+  }
   .navbar-brand {
     margin-right: 0;
   }

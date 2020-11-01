@@ -159,10 +159,10 @@ export default {
   background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/T1ZxKOuls12KonXgRHheQa7lUQzKuskzWWfUHSyxlDO4BJvcxOJOYgNzMBrCn68i3B8z9bqIEAvbHa1uCQpBpMezrTnIIKtEkARzQUSpisVdreQpHpx5uqrgnXHw2UWs.jpg');
 }
 .banner2 {
-  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/MCMSvU6EzLKNqmKaa2sUw56ONiLdoYTsaIcv9YQJldx4qJ32trEwdoBleHJ5ZdvuyDAAKqQ2Ja9hSy42Dv1YcDsSH5URESzemczMnuvNbyv2ngOgem0uENpwAH3QVV0K.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/jNwID0GITqBgXyAnkfxdefhYHTFVOxuS9SaUblp3l2dfoKBAzeKQIxUPjkbBkIv0AcT3931zRE3toGRf9iOP5NnimZhTPGTgMG70xhVgPjvA86wiNA2uZPDAB51KubZt.jpg');
 }
 .banner3 {
-  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/CTouP65ZiIGgjl2kaxQawqA9mqaHjWBUZRM3ER5yxdBPhWMyC4ZKmSsE6zTHXRoDZPyc0DxDzwDlXAw2vRJ2xstYw9ixgBgPYG8GeWnaD8uv808sDYLaY46DMfxsCkeY.jpg');
+  background-image: url('https://hexschool-api.s3.us-west-2.amazonaws.com/custom/KneVjf4SAfrUe5m1wfYdvGnJuDlb0cgXatPBrBzbsIh5zutRZdczo85udiHEf1s2AYuwKXRNCpUKFxEsIubUv3sMNNrKowySiuz0aeYb51Jy0q082VBi2TKSDYTMXcOB.jpg');
 }
 .service {
   background: #fafafa;

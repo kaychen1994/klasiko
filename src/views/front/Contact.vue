@@ -47,21 +47,21 @@
             alt="KLÁSIKO 旗艦店"
           />
           <div class="card-body">
-            <h3 class="card-title font-weight-bold text-main">台北 101 旗艦店</h3>
+            <h3 class="card-title font-weight-bold text-main">台北旗艦店</h3>
           </div>
           <div class="card-footer bg-transparent">
-            <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
-              <span class="material-icons mr-lg-2 mr-sm-1">call</span>
+            <p class="fz-20 d-flex align-items-center justify-content-center">
+              <span class="material-icons mr-2">call</span>
               電話：(02)2234-5678
             </p>
-            <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
-              <span class="material-icons mr-lg-2 mr-sm-1">schedule</span>
+            <p class="fz-20 d-flex align-items-center justify-content-center">
+              <span class="material-icons mr-2">schedule</span>
               營業時間：10:00-21:00
             </p>
-            <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
+            <!-- <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
               <span class="material-icons mr-lg-2 mr-sm-1">mail_outline</span>
               Email：klasiko@service.com
-            </p>
+            </p> -->
           </div>
         </div>
         <div class="map col-md-11">
@@ -84,21 +84,21 @@
             alt="KLÁSIKO 分店"
           />
           <div class="card-body">
-            <h3 class="card-title font-weight-bold text-main">台中廣三 SOGO 分店</h3>
+            <h3 class="card-title font-weight-bold text-main">台中西屯分店</h3>
           </div>
           <div class="card-footer bg-transparent">
-            <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
-              <span class="material-icons mr-lg-2 mr-sm-1">call</span>
+            <p class="fz-20 d-flex align-items-center justify-content-center">
+              <span class="material-icons mr-2">call</span>
               電話：(04)2234-5678
             </p>
-            <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
-              <span class="material-icons mr-lg-2 mr-sm-1">schedule</span>
+            <p class="fz-20 d-flex align-items-center justify-content-center">
+              <span class="material-icons mr-2">schedule</span>
               營業時間：10:00-21:00
             </p>
-            <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
+            <!-- <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
               <span class="material-icons mr-lg-2 mr-sm-1">mail_outline</span>
               Email：klasiko@service.com
-            </p>
+            </p> -->
           </div>
         </div>
         <div class="map col-md-11">
@@ -121,21 +121,21 @@
             alt="KLÁSIKO 分店"
           />
           <div class="card-body">
-            <h3 class="card-title font-weight-bold text-main">高雄左營新光三越分店</h3>
+            <h3 class="card-title font-weight-bold text-main">高雄左營分店</h3>
           </div>
           <div class="card-footer bg-transparent">
-            <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
-              <span class="material-icons mr-lg-2 mr-sm-1">call</span>
+            <p class="fz-20 d-flex align-items-center justify-content-center">
+              <span class="material-icons mr-2">call</span>
               電話：(07)2234-5678
             </p>
-            <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
-              <span class="material-icons mr-lg-2 mr-sm-1">schedule</span>
+            <p class="fz-20 d-flex align-items-center justify-content-center">
+              <span class="material-icons mr-2">schedule</span>
               營業時間：10:00-21:00
             </p>
-            <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
+            <!-- <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
               <span class="material-icons mr-lg-2 mr-sm-1">mail_outline</span>
               Email：klasiko@service.com
-            </p>
+            </p> -->
           </div>
         </div>
         <div class="map col-md-11">
