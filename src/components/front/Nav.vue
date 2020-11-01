@@ -82,7 +82,6 @@ export default {
   }
   .nav-link:hover,.nav-link.active{
     background: #cbac67;
-    // color: white !important;
     font-weight: bold !important;
   }
   .navbar {

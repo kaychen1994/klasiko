@@ -1,5 +1,4 @@
 <template>
-  <!-- admin content -->
   <div>
     <loading :active.sync="isLoading">
       <template slot="default">
