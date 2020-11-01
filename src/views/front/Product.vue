@@ -34,11 +34,11 @@
           <h2 class="text-left mb-4 text-main font-weight-bold">{{ product.title }}</h2>
           <p class="text-left mb-4">{{ product.content }}</p>
           <div class="d-flex justify-content-between">
-            <p class="mr-6 lineThrough text-secondary">{{ product.origin_price | money }} 元</p>
+            <p class="mr-lg-6 mr-md-3 lineThrough text-secondary">{{ product.origin_price | money }} 元</p>
             <p class="font-weight-bold text-danger">{{ product.price | money }} 元</p>
           </div>
           <div class="d-flex justify-content-between">
-            <select name="unit" v-model="product.num" class="px-6 py-1 mr-3">
+            <select name="unit" v-model="product.num" class="px-lg-6 px-md-3 py-1 mr-3">
               <option :value="num" v-for="num in 5" :key="num">{{ num }} 隻</option>
             </select>
             <button

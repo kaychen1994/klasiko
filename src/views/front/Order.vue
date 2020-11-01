@@ -93,44 +93,44 @@
                 <validation-provider v-slot="{ errors, classes }" rules="required|email">
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                      <label for="email" class="input-group-text">收件人信箱</label>
+                      <label for="email" class="input-group-text"><span class="text-red mr-1">*</span>收件人信箱</label>
                     </div>
-                    <input type="email" class="form-control" name="信箱" id="email" v-model="form.email" :class="classes" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="email" class="form-control" name="信箱" id="email" v-model="form.email" :class="classes">
                   </div>
-                  <span v-if="errors[0]" class="text-danger">{{ errors[0] }}</span>
+                  <span v-if="errors[0]" class="invalid-feedback text-left">{{ errors[0] }}</span>
                 </validation-provider>
               </div>
               <div class="form-group">
                 <validation-provider v-slot="{ errors, classes }" rules="required">
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                      <label for="name" class="input-group-text">收件人姓名</label>
+                      <label for="name" class="input-group-text"><span class="text-red mr-1">*</span>收件人姓名</label>
                     </div>
-                    <input type="text" class="form-control" name="收件人姓名" id="name" v-model="form.name" :class="classes" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" name="收件人姓名" id="name" v-model="form.name" :class="classes">
                   </div>
-                  <span v-if="errors[0]" class="text-danger">{{ errors[0] }}</span>
+                  <span v-if="errors[0]" class="invalid-feedback text-left">{{ errors[0] }}</span>
                 </validation-provider>
               </div>
               <div class="form-group">
                 <validation-provider v-slot="{ errors, classes }" rules="required|min:10">
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                      <label for="phone" class="input-group-text">收件人電話</label>
+                      <label for="phone" class="input-group-text"><span class="text-red mr-1">*</span>收件人電話</label>
                     </div>
-                    <input type="text" class="form-control" name="收件人電話" id="phone" v-model="form.tel" :class="classes" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" name="收件人電話" id="phone" v-model="form.tel" :class="classes">
                   </div>
-                  <span v-if="errors[0]" class="text-danger">{{ errors[0] }}</span>
+                  <span v-if="errors[0]" class="invalid-feedback text-left">{{ errors[0] }}</span>
                 </validation-provider>
               </div>
               <div class="form-group">
                 <validation-provider v-slot="{ errors, classes }" rules="required|min:10">
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                      <label for="address" class="input-group-text">收件人地址</label>
+                      <label for="address" class="input-group-text"><span class="text-red mr-1">*</span>收件人地址</label>
                     </div>
-                    <input type="text" class="form-control" name="收件人地址" id="address" v-model="form.address" :class="classes" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" name="收件人地址" id="address" v-model="form.address" :class="classes">
                   </div>
-                  <span v-if="errors[0]" class="text-danger">{{ errors[0] }}</span>
+                  <span v-if="errors[0]" class="invalid-feedback text-left">{{ errors[0] }}</span>
                 </validation-provider>
               </div>
               <div class="input-group mb-3">
@@ -281,5 +281,9 @@ export default {
   text-align: left !important;
   font-weight: bold;
   color: #cbac67;
+}
+.invalid-feedback {
+  display: block;
+  font-size: 90%;
 }
 </style>

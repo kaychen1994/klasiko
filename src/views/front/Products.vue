@@ -34,53 +34,82 @@
               href="#"
               class="list-group-item list-group-item-action list-group-item-secondary active"
               @click.prevent="filterCategory = ''"
-            >全系列錶款</a>
+              >全系列錶款</a
+            >
             <a
               href="#"
               class="list-group-item font-weight-bold list-group-item-action list-group-item-light"
               @click.prevent="filterCategory = item"
               v-for="item in categories"
               :key="item"
-            >{{ item }}</a>
+              >{{ item }}</a
+            >
           </div>
         </div>
         <div class="col-lg-10 col-md-9">
           <div id="prductsCard" class="row">
-            <div class="card mb-5 col-lg-4" v-for="item in filterCategories" :key="item.id">
-              <div class="card-body">
-                <router-link :to="`/product/${ item.id }`">
-                  <img class="card-img-top product-img mb-4" :style="{ backgroundImage: `url(${item.imageUrl[0]})` }"/>
-                </router-link>
-                <h3 class="card-title text-main font-weight-bold mb-4">{{ item.title }}</h3>
-                <p class="card-text text-left mb-4">{{ item.content }}</p>
-                <div class="card-text d-flex justify-content-center align-items-center">
-                  <span class="lineThrough text-secondary">{{ item.origin_price | money }} 元</span>
-                  <span class="text-red font-weight-bold ml-4">{{ item.price | money }} 元</span>
+            <div
+              class="col-lg-4"
+              v-for="item in filterCategories"
+              :key="item.id"
+            >
+              <div class="card mb-5">
+                <div class="card-body">
+                  <router-link :to="`/product/${item.id}`">
+                    <img
+                      class="card-img-top product-img mb-4"
+                      :style="{ backgroundImage: `url(${item.imageUrl[0]})` }"
+                    />
+                  </router-link>
+                  <h3 class="card-title text-main font-weight-bold mb-4">
+                    {{ item.title }}
+                  </h3>
+                  <p class="card-text text-left mb-4">{{ item.content }}</p>
+                  <div
+                    class="card-text d-flex justify-content-center align-items-center"
+                  >
+                    <span class="lineThrough text-secondary"
+                      >{{ item.origin_price | money }} 元</span
+                    >
+                    <span class="text-red font-weight-bold ml-4"
+                      >{{ item.price | money }} 元</span
+                    >
+                  </div>
                 </div>
-              </div>
-              <div class="card-footer bg-transparent d-flex justify-content-between flex-sm-wrap">
-                <button type="button" class="btn btn-dark detail-button px-3 mb-sm-3 d-flex" :disabled="status.loadingItem === item.id">
-                  <router-link :to="`/product/${ item.id }`" class="text-light text-decoration-none">查看商品</router-link>
-                  <i
-                      v-if="status.loadingItem === item.id"
-                      class="spinner-grow spinner-grow-sm"
-                  ></i>
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-main px-3 mb-sm-3 d-flex"
-                  :disabled="status.loadingItem === item.id"
-                  @click.prevent="goToCart(item.id)"
+                <div
+                  class="card-footer bg-transparent d-flex justify-content-between flex-sm-wrap"
                 >
-                  <span class="mr-3">加到購物車</span>
-                  <span class="material-icons">
-                    add_shopping_cart
+                  <button
+                    type="button"
+                    class="btn btn-dark detail-button px-3 mb-sm-3 d-flex"
+                    :disabled="status.loadingItem === item.id"
+                  >
+                    <router-link
+                      :to="`/product/${item.id}`"
+                      class="text-light text-decoration-none"
+                      >查看商品</router-link
+                    >
                     <i
                       v-if="status.loadingItem === item.id"
                       class="spinner-grow spinner-grow-sm"
                     ></i>
-                  </span>
-                </button>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-main px-3 mb-sm-3 d-flex"
+                    :disabled="status.loadingItem === item.id"
+                    @click.prevent="goToCart(item.id)"
+                  >
+                    <span class="mr-3">加到購物車</span>
+                    <span class="material-icons">
+                      add_shopping_cart
+                      <i
+                        v-if="status.loadingItem === item.id"
+                        class="spinner-grow spinner-grow-sm"
+                      ></i>
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -139,7 +168,8 @@ export default {
         product: id,
         quantity: quantity
       }
-      this.$http.post(url, cart)
+      this.$http
+        .post(url, cart)
         .then((res) => {
           this.$bus.$emit('in-cart')
           this.status.loadingItem = ''

@@ -77,20 +77,20 @@ export default {
   align-items: center;
 }
 @media (max-width: 768px) {
-  .logo {
-    padding: 16px 0;
-  }
   .navMenu {
     display: inline;
   }
   .nav-link:hover,.nav-link.active{
     background: #cbac67;
-    color: white !important;
+    // color: white !important;
     font-weight: bold !important;
   }
   .navbar {
     padding-top: 0;
     padding-bottom: 0;
+  }
+  .navbar-brand {
+    margin-right: 0;
   }
 }
 </style>

@@ -24,6 +24,7 @@
   align-items: center;
   justify-content: space-around;
   background: black;
+  padding-top: 10px;
 }
 @media (max-width: 768px) {
   .footer {

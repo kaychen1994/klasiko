@@ -13,20 +13,20 @@
         </div>
       </div>
     </div>
-    <div class="service py-6 mb-6">
+    <div class="service py-6 mb-6 container-fluid">
       <h2 class="h2Title">KLÁSIKO 的特色</h2>
-      <ul class="d-flex justify-content-around list-unstyled">
-        <li class="serviceList">
+      <ul class="d-flex justify-content-around list-unstyled row text-left">
+        <li class="serviceList col-lg-4 px-lg-8 px-sm-3">
           <img src="images/fix.svg" alt="KLÁSIKO 保固" />
           <span>2 年保固</span>
           <p>提供長達 2 年的免費保固服務，不限會員資格皆享有專業維修服務，超過保固期也享有維修折扣。</p>
         </li>
-        <li class="serviceList">
+        <li class="serviceList col-lg-4 px-lg-8 px-sm-3">
           <img src="images/like.svg" alt="KLÁSIKO 品質" />
           <span>品質保證</span>
           <p>KLÁSIKO 只賣正品，絕對都是從瑞士、日本進口的時尚腕錶，在 KLÁSIKO 不用怕買到假貨。</p>
         </li>
-        <li class="serviceList">
+        <li class="serviceList col-lg-4 px-lg-8 px-sm-3">
           <img src="images/money.svg" alt="KLÁSIKO 價格" />
           <span>價格公道</span>
           <p>全台最優惠的正品進口腕錶，只在 KLÁSIKO ，歡迎比價，網購滿 $8,800 免運費。</p>
@@ -143,8 +143,8 @@ export default {
   align-items: flex-end;
   color: white;
   font-size: 64px;
-  padding-right: 64px;
-  padding-bottom: 64px;
+  // padding-right: 64px;
+  // padding-bottom: 64px;
   position: relative;
 }
 .bannerText {
@@ -167,7 +167,7 @@ export default {
 .service {
   background: #fafafa;
   .serviceList {
-    width: 240px;
+    // width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;

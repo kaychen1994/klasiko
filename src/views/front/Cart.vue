@@ -14,7 +14,7 @@
     <div class="topCover cart-bg bg-img d-flex">
       <h3 class="coverTitle">Cart</h3>
     </div>
-    <div class="container-fluid">
+    <div class="container">
       <div class="breadcrumb">
         <ul class="list-unstyled d-flex align-items-center">
           <li>
@@ -49,9 +49,9 @@
           <table class="table table-hover mb-5">
             <thead class="thead-light">
               <tr>
-                <th scope="col" width="5%" @click.prevent="delProduct()">刪除</th>
+                <th scope="col" width="1%" @click.prevent="delProduct()">刪除</th>
                 <th scope="col" width="25%">產品名稱</th>
-                <th scope="col" width="50%">數量</th>
+                <th scope="col" width="20%">數量</th>
                 <th scope="col" width="20%" class="text-right">價格</th>
               </tr>
             </thead>
@@ -80,13 +80,13 @@
             <p class="amount">商品總額： {{ cartTotal | money }}</p>
           </div>
           <div class="d-flex justify-content-between flex-sm-wrap mb-6 row">
-            <router-link to="/products" class="text-dark text-decoration-none col-md-10 col-lg-3 mb-3">
-              <button type="button" class="btn btn-outline-secondary px-6">
+            <router-link to="/products" class="text-dark text-decoration-none col-md-5 col-lg-3 mb-3">
+              <button type="button" class="btn btn-outline-secondary px-3">
                 繼續購物
               </button>
             </router-link>
-            <router-link to="/Order" class="text-light text-decoration-none col-md-10 col-lg-3">
-              <button type="button" class="btn btn-main px-6">
+            <router-link to="/Order" class="text-light text-decoration-none col-md-5 col-lg-3">
+              <button type="button" class="btn btn-main px-3">
                 前往下一步
               </button>
             </router-link>
@@ -96,8 +96,8 @@
       <div v-else>
         <div>
           <h3 class="mb-6">您尚未加入商品至購物車</h3>
-          <button type="button" class="btn btn-main mb-6">
-            <router-link class="text-decoration-none text-light" to="/products">繼續逛逛</router-link>
+          <button type="button" class="btn btn-main mb-6 goProducts">
+            <router-link class="text-decoration-none" to="/products">繼續逛逛</router-link>
           </button>
         </div>
         <h2 class="h2Title">本月熱銷 TOP 10</h2>
@@ -187,8 +187,7 @@ export default {
     delProduct (id) {
       this.isLoading = true
       const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/shopping/${id}`
-      this.$http
-        .delete(url)
+      this.$http.delete(url)
         .then(() => {
           this.$bus.$emit('in-cart')
           this.getCart()
@@ -221,6 +220,19 @@ export default {
   font-size: 32px;
   text-align: right;
   margin-bottom: 42px;
+}
+.goProducts {
+  a {
+    color: white;
+  }
+}
+.goProducts:hover {
+  border: 1px solid #cbac67;
+  background: white;
+  a {
+    color:#cbac67;
+    font-weight: bold;
+  }
 }
 @media (max-width: 768px) {
   .amount {
