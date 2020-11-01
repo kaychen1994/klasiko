@@ -3,7 +3,7 @@
     <swiper :options="swiperOption">
       <swiper-slide class="item mb-5" v-for="item in related" :key="item.id">
         <div class="card">
-          <img class="card-img-top relatedImg" :src="item.imageUrl[0]" @click.prevent="getDetail(item.id)" />
+          <img class="card-img-top" :src="item.imageUrl[0]" @click.prevent="getDetail(item.id)" />
           <div class="card-body">
             <h5 class="card-title text-main font-weight-bold">{{ item.title }}</h5>
             <p class="card-text">{{ item.price | money }} 元</p>
@@ -95,9 +95,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.relatedImg {
-  min-height: 180px;
-}
-</style>

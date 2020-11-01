@@ -42,7 +42,7 @@
       <div class="mb-6 row px-2 d-flex flex-column align-items-center">
         <div class="card contactCard col-md-11 mb-4">
           <img
-            src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/dRdCZgSnvEcP7OViwEMqJxEXcqmMKXbuIPYtNLjGEhNGEguynitBirVTn9jH2AHmjMcY38piL1PBLQx4TXvzQjP9L3rveFCPlYb9HlrFxzyfVEAhg4XA20IBleHJbEiY.jpg"
+            src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/9RBeAvo54M97oeCvDSal7j725TjE3SpFFVYIpuV8fWuc0eMO5Se2HReay4NaaWBkOxOkpk1RAmSlCWmNTBheU6oBwEljweafNj2RcU5QlF24TSVHE3FRFlKrzffWhYK0.jpg"
             class="card-img-top"
             alt="KLÁSIKO 旗艦店"
           />
@@ -58,10 +58,6 @@
               <span class="material-icons mr-2">schedule</span>
               營業時間：10:00-21:00
             </p>
-            <!-- <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
-              <span class="material-icons mr-lg-2 mr-sm-1">mail_outline</span>
-              Email：klasiko@service.com
-            </p> -->
           </div>
         </div>
         <div class="map col-md-11">
@@ -79,7 +75,7 @@
       <div class="mb-6 row px-2 d-flex flex-column align-items-center">
         <div class="card contactCard col-md-11 mb-4">
           <img
-            src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/vpElXHYZGipTOMSMJtbNsxQ2TAoBwZM1dDJldNRjZgWboGsAh9rdJtuE9ExdTs2L1Vg0bK9bKtSIIHyiOMp8Vl3izUYAozZhvbMZmbKddy4abODY5aILpqJTba9MVPVr.jpg"
+            src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/wm5JKcsjFTqWOZNZ5mzzKn7X3btV1T5Rj4XS70tD09DpaKlda7v1BGEKiXftCzgkyKi2I9N8ppDPU92vWQcNRnDzM7g9EEXYUBOv2gaK0h0QsuL7SSRFJeRveB04ZAtG.jpg"
             class="card-img-top"
             alt="KLÁSIKO 分店"
           />
@@ -95,10 +91,6 @@
               <span class="material-icons mr-2">schedule</span>
               營業時間：10:00-21:00
             </p>
-            <!-- <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
-              <span class="material-icons mr-lg-2 mr-sm-1">mail_outline</span>
-              Email：klasiko@service.com
-            </p> -->
           </div>
         </div>
         <div class="map col-md-11">
@@ -116,7 +108,7 @@
       <div class="mb-6 row px-2 d-flex flex-column align-items-center">
         <div class="card contactCard col-md-11 mb-4">
           <img
-            src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/XTUCr6fEApmGmfoBQ1LpEu4lyTFnY22ZpwuIrFUXVoqhrGtl1wxaz3aZZX1pLb8ChRj0TUutsZWOoTMKXpVuGNoNnyZdYNlK7KmhpTX7zRwWclpEyjp0rMVOTiuI8Ew7.jpg"
+            src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/InkvX4qGW2ZHIdSjftdbDtNfvzTEjIVvW0vL7nw0S8d2c6cwl9KZhh0BfqSytozvIOnqzc8uQRMrpCaynYGp0jM6nXwecbznMNAUDwYEkKA7oP1HmejzIsGqCuMF7MEW.jpg"
             class="card-img-top"
             alt="KLÁSIKO 分店"
           />
@@ -132,10 +124,6 @@
               <span class="material-icons mr-2">schedule</span>
               營業時間：10:00-21:00
             </p>
-            <!-- <p class="fz-20 d-flex align-items-center justify-content-lg-center justify-content-sm-between">
-              <span class="material-icons mr-lg-2 mr-sm-1">mail_outline</span>
-              Email：klasiko@service.com
-            </p> -->
           </div>
         </div>
         <div class="map col-md-11">

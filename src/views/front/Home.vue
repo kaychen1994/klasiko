@@ -39,7 +39,7 @@
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/gWUBr5ofRpCAj35XZwjFqPcFyGevajq6xfrwD73ALi0upS2ERRcxboLq5CDA0KdkCkgQlnbgBf6tMAJdygxLaNum5KlQKpagsv52OyNX1SD8j2mhNU9KiTTIaZnegWES.jpg" class="card-img-top cardImg" alt="石英錶" />
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/VGlQiNk3UFQbbcTYMrMTd08b5fJYlTFCIjIxodCvQZuX5sKwOZBEi55jjbBY3Ifeha3KKw6EITw3el9dXpo1qFYylgTnEu1uTO1hV0E93eFm2skCdlgGXi8NWspDMXw3.jpg" class="card-img-top cardImg" alt="石英錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">石英錶</h3>
@@ -52,7 +52,7 @@
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/Sr1OZFDeHP6Zu1IJC7CEMLYOzhtihEeYTWb56uuCiufcAkM4WODzXV6vHXOIcRn779ndlNTCwkXL5YiGwXG0e8DTGJ6ShEaqWv2bTQedwGTlDEjnHQSayXfTaFIaH6wG.jpg" class="card-img-top cardImg" alt="潛水錶" />
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/52Z0NQVtVlnCVltCh8BsONQKixS5A2M56w5Mwimbsq1VMmZpHzXWrABh4y53Sdumg4qPeh11LWP8Qj6S8SrLJgPteF5CBFGWvRbjQzC3pBrGjN9lu1VSWh8jJzsuFrpv.jpg" class="card-img-top cardImg" alt="潛水錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">潛水錶</h3>
@@ -65,7 +65,7 @@
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/MjJipn37mpTjUeUhDCv3rVfBZVC17iZfzdXJx27BDk3T6mSXT9OWCgKKO0NTT4OiEDwfeNEcK5GKkEN2bG3ZKAHgNg0dm9Q2PQlBcSXTeP75IaoUZaXvnwqiXhWEKGi6.jpg" class="card-img-top cardImg" alt="機械錶" />
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/QCimRPAPqhqsbjv0FmkFSU3K0D1wDgLgo3JCS4g8moFznrXiEqh9rwldCmmcODKW2cdLDtyNLmDmxlnXTdPJxPCvSdYFgr7NRhKTLxVCTTO8vacvZ8Uf5mqQiqkvuX43.jpg" class="card-img-top cardImg" alt="機械錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">機械錶</h3>
@@ -78,7 +78,7 @@
         <li class="col-lg-3 col-md-9 mb-4">
           <div class="card mb-2 productShadow">
             <router-link to="/products">
-              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/KRGUW6FkEdUZbbHwiGFTYtXUkiul7MYtif6FhBNlL3LRGyoFHUWLJH8uevBu1HbufAvEAcRiPKllc5n0yksIDlpW8M4DNEuHuoCQ8tXHjYGR2Jddolt4YF0SGnuJGhFz.jpg" class="card-img-top cardImg" alt="電子錶" />
+              <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/VFIARMogyYXJuhvw48INGF5Bb3gX8mxAkdkLT8q2Ucdndde3CBVdu3wluoK7KihrDlK7YnpLmdfIksdyy8TrEAKJnNAliwoAEFE8Qz4ljjEgLXClnN68wmYQsdIoidu4.jpg" class="card-img-top cardImg" alt="電子錶" />
             </router-link>
             <div class="card-body">
               <h3 class="card-title text-sec text-center font-weight-bold">電子錶</h3>
@@ -143,13 +143,12 @@ export default {
   align-items: flex-end;
   color: white;
   font-size: 64px;
-  // padding-right: 64px;
-  // padding-bottom: 64px;
   position: relative;
 }
 .bannerText {
   position: absolute;
   border-bottom: 5px solid white;
+  font-weight: bold;
   right: 10%;
   bottom: 10%;
   text-align: center;
@@ -167,7 +166,6 @@ export default {
 .service {
   background: #fafafa;
   .serviceList {
-    // width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
