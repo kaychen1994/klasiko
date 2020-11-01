@@ -228,6 +228,11 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+  .bannerText {
+    overflow: hidden;
+    height: 0;
+    border-bottom: 0;
+  }
 }
 @media (max-width: 375px) {
   .serviceList {

@@ -81,13 +81,13 @@
                 >
                   <button
                     type="button"
-                    class="btn btn-dark detail-button px-3 mb-sm-3 d-flex"
+                    class="btn btn-dark detail-button mb-sm-3 d-flex"
                     :disabled="status.loadingItem === item.id"
                   >
                     <router-link
                       :to="`/product/${item.id}`"
                       class="text-light text-decoration-none"
-                      >查看商品</router-link
+                      >點擊查看商品</router-link
                     >
                     <i
                       v-if="status.loadingItem === item.id"
@@ -96,11 +96,11 @@
                   </button>
                   <button
                     type="button"
-                    class="btn btn-main px-3 mb-sm-3 d-flex"
+                    class="btn btn-main mb-sm-3 d-flex"
                     :disabled="status.loadingItem === item.id"
                     @click.prevent="goToCart(item.id)"
                   >
-                    <span class="mr-3">加到購物車</span>
+                    <span class="mr-lg-3 mr-sm-1">加到購物車</span>
                     <span class="material-icons">
                       add_shopping_cart
                       <i
