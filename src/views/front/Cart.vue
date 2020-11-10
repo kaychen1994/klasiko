@@ -69,7 +69,13 @@
                     <i v-if="status.loadingItem === item.id" class="spinner-grow spinner-grow-sm"></i>
                   </button>
                 </td>
-                <td>{{ item.product.title }}</td>
+                <td>
+                  <router-link
+                    :to="`/product/${item.product.id}`"
+                    class="text-dark"
+                    >{{ item.product.title }}</router-link
+                  >
+                </td>
                 <td>{{ item.quantity }}</td>
                 <td class="text-right">{{item.product.price | money }}</td>
               </tr>

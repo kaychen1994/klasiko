@@ -191,7 +191,7 @@ export default {
 .more {
   background: #cbac67;
   &:hover {
-    background: #dc3545;
+    background: black;
   }
   a {
     padding-top: 8px;

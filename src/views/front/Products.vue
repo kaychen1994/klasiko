@@ -79,24 +79,23 @@
                 <div
                   class="card-footer bg-transparent d-flex justify-content-between flex-sm-wrap"
                 >
+                  <router-link
+                    :to="`/product/${item.id}`"
+                    class="text-decoration-none">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary d-flex"
+                      :disabled="status.loadingItem === item.id"
+                      >點擊查看商品
+                      <i
+                        v-if="status.loadingItem === item.id"
+                        class="spinner-grow spinner-grow-sm"
+                      ></i>
+                    </button>
+                  </router-link>
                   <button
                     type="button"
-                    class="btn btn-dark detail-button mb-sm-3 d-flex"
-                    :disabled="status.loadingItem === item.id"
-                  >
-                    <router-link
-                      :to="`/product/${item.id}`"
-                      class="text-light text-decoration-none"
-                      >點擊查看商品</router-link
-                    >
-                    <i
-                      v-if="status.loadingItem === item.id"
-                      class="spinner-grow spinner-grow-sm"
-                    ></i>
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-main mb-sm-3 d-flex"
+                    class="btn btn-main d-flex"
                     :disabled="status.loadingItem === item.id"
                     @click.prevent="goToCart(item.id)"
                   >

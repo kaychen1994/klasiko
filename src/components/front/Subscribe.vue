@@ -10,7 +10,7 @@
         placeholder="輸入 email 訂閱"
         class="mb-5"
       />
-      <button type="button" class="btn btn-danger px-3 py-1">訂閱</button>
+      <button type="button" class="btn btn-dark px-3 py-1">訂閱</button>
     </div>
     <img src="https://hexschool-api.s3.us-west-2.amazonaws.com/custom/ukJxVPT3IrSEMd0TvKfAQyKLBgideQnH4eNRhe4ZVxXDenaZ6G7hTcXb8VFigya0mEJ7OkDadtTkjgFSwUCHuSu32PeSrwL8gbvAztwcvlyCUEav1mTq0ZdHvM5uhFxC.jpg" alt="subscribe" />
   </div>
