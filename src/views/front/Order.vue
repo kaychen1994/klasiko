@@ -286,4 +286,7 @@ export default {
   display: block;
   font-size: 90%;
 }
+.btn-main:disabled {
+  background:#cbac67 !important;
+}
 </style>

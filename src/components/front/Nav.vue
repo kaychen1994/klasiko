@@ -68,8 +68,8 @@ export default {
 </script>
 
 <style lang="scss">
-.nav-link:hover, .nav-link.active{
-  border-bottom: 3px solid white !important;
+.nav-link:hover, .nav-link.router-link-exact-active {
+  box-shadow: 0px 2px white;
 }
 .navMenu {
   display: flex;
@@ -80,8 +80,8 @@ export default {
   .navMenu {
     display: inline;
   }
-  .nav-link:hover, .nav-link.active {
-    background: #cbac67;
+  .nav-link:hover, .nav-link.router-link-exact-active {
+    background: #cbac67 !important;
     font-weight: bold !important;
   }
   .navbar {
