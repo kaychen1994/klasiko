@@ -4,7 +4,7 @@
       <a class="text-main text-decoration-none" href="#">KLÁSIKO</a>
     </h3>
     <p class="text-white">Copyright © 2020 kay Chen</p>
-    <ul class="d-flex list-unstyled">
+    <ul class="footer-menu d-flex list-unstyled">
       <li class="nav-item">
         <router-link class="nav-link text-light" to="/news">最新消息</router-link>
       </li>
@@ -30,6 +30,10 @@
   .footer {
     display: flex;
     flex-direction: column;
+  }
+  .footer-menu {
+    overflow: hidden;
+    height: 0;
   }
 }
 </style>
